@@ -22,7 +22,7 @@ public class DiabeKareBean implements Serializable {
    public Connection dbConnection() {
        try {
            Class.forName("com.mysql.jdbc.Driver");
-           conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/info_campus", "root", "root123");
+           conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/diabekare", "root", "root123");
        } catch (SQLException e) {
            e.printStackTrace();
        } catch (ClassNotFoundException e) {

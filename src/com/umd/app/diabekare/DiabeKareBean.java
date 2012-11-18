@@ -15,6 +15,9 @@ import java.util.ArrayList;
 * @exception SQL Exception & Class Not Found Exception
 * @version 1.0
 *
+*
+*
+*
 */
 public class DiabeKareBean implements Serializable {
 

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 *
 *
 */
-public class DiabeKareBean implements Serializable {
+public class DiabeKareBean  {
 
    Connection conn = null;
    ResultSet rs;
@@ -36,4 +36,34 @@ public class DiabeKareBean implements Serializable {
        return conn;
    }
    
+   /**
+   *
+   * @author Aakash Moni
+   * @date  11-18-2012
+   * @function insertUserDetails
+   * @purpose insert user details
+   * @return null
+   * @exception SQL Exception & Class Not Found Exception
+   * @version 1.0
+   *
+   *
+   *
+   *
+   */
+   
+	public boolean insertUserDetails(String fname, String lname, String uname,
+			String pass, String age, String sex) {
+		boolean flag = false;
+
+		try {
+			Connection connection = dbConnection();
+			Statement statement = connection.createStatement();
+
+			statement.executeUpdate("insert into user_details(first_name,last_name,username,password,age,sex) values('"+ fname+ "','"+ lname+ "','"+ uname+ "','"+ pass + "'," + age + ",'" + sex + "')");
+			flag = true;
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return flag;
+	}
 }

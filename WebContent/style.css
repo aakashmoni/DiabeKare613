@@ -3,13 +3,14 @@ body { background:url(images/bg.jpg) #e7e9eb repeat-x; margin:0; font-family:Ari
 a { text-decoration:none;}
 #container { width:960px; margin:0 auto; height:auto;}
 #header { width:960px; float:left; height:100px;}
+#header a{ color:#fdb700;} 
 #logo { height:109px; float:left; width:376px;}
 #navigation { float:left; width:500px; height:158px;}
 #top { float:left; width:600px; height:113px;}
 #menubar { float:left; width:960px; height:40px; }
 #top_left { float:left; width:434px; height:113px; background:url(images/caption.jpg) no-repeat;}
-#top_right { float:right; width:524px; height:59px; color:#fdb700; text-align:right; padding:16px 0 0 0;}
-#top_right img {margin:1px 0 0 414px; float:left;}
+#top_right { float:right; width:524px; height:105px; color:#fdb700; text-align:right; padding:16px 0 0 0;}
+#top_right img {margin:1px 0 0 249px; float:left;}
 #topmenu{ background:url(images/menubar.png) no-repeat; width:960px; float:right; height:40px;}
 #topmenu ul { margin:0px; padding:0px; list-style:none;}
 #topmenu ul li { float:left; width:124px; text-align:center; margin:0 0 0 3px; line-height:40px;}
@@ -19,6 +20,10 @@ a { text-decoration:none;}
 #content { width:960px; float:left; height:auto; margin:20px 0 0;}
 .loginbox{ width:387px; float:right; margin-top:10px;}
 #txtbox { background:url(images/txtbox.png) no-repeat; width:156px; height:29px; float:left; color:#bbb; border:none; line-height:25px; padding:0 5px; outline:none;}
+#innerpage_content { width:920px; float:left; height:auto; margin:0; padding:20px; background:#e7e9eb;}
+#innerpage_content #sidebar { width:266px;}
+#innerpage_content #sidebar  .features {width:266px;}
+#innerpage_content #sidebar  .application{width:266px;}
 #submit { background:url(images/submit.png) no-repeat; width:33px; height:25px; border:none; font-size:0px; float:left; margin-left:2px; margin-top:2px; cursor:pointer;}
 .clearfix { clear:both;}
 .leftbox { width:619px; float:left; height:auto; font-weight:lighter; background:url(images/border.jpg) repeat-y right; padding: 0 15px 15px 0 ;}

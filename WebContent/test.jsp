@@ -7,8 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-
-<body>
 <script language="javascript">
 function ff()
 {
@@ -47,10 +45,12 @@ else
 	return true;
 }
 </script>
+
+<body>
 <div id="container"> 
 <div id="innerpage_content">
 <div class="leftbox">
-        	<h1>Register User</h1>
+        	<h1>Welcome to Solarium Solar<br /><br />
             <form action="RegisterUser_Process.jsp" name="f2" onSubmit="return ff()">
 <table border="0">
 <tr>

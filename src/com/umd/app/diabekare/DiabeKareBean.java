@@ -4,6 +4,8 @@ import java.sql.*;
 import java.io.*;
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
+
 /**
 *
 * @author Aakash Moni
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 *
 */
 public class DiabeKareBean  {
+	private Logger log = Logger.getLogger("DiabeKarelogger");
 
    Connection conn = null;
    ResultSet rs;
@@ -65,5 +68,40 @@ public class DiabeKareBean  {
 			System.out.println(e);
 		}
 		return flag;
+	}
+	
+	/**
+	   *
+	   * @author Aakash Moni
+	   * @date  11-19-2012
+	   * @function login
+	   * @purpose check username and password exits in DB
+	   * @return null
+	   * @exception SQL Exception & Class Not Found Exception
+	   * @version 1.0
+	   *
+	   *
+	   *
+	   *
+	   */
+	public boolean login(String username, String password)
+	{
+	   Connection con = dbConnection();
+	   Boolean flag = false;
+	   try {
+	            PreparedStatement pr = con.prepareStatement("select * from user_details where username='"+username+"' and password='"+password+"'");
+	            System.out.println("==========select * from user_details where username='"+username+"' and password='"+password+"'");
+	            log.debug("DiabeKareBean.login==========select * from user_details where username='"+username+"' and password='"+password+"'");
+	            rs = pr.executeQuery();
+	            if(rs.next())
+	            {
+	            	flag = true;
+	            }
+
+	        } catch (SQLException sqle) {
+	            System.out.println("SQL Error :" + sqle);
+	        }
+
+	        return flag;
 	}
 }

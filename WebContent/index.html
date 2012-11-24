@@ -5,25 +5,47 @@
 <title>DiabeKare</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
+<script language="javascript">
+    function val()
+    {
+
+
+      if(document.login.username.value=="")
+           {
+                alert("Enter  Username");
+                return false;
+           }
+      if(document.login.password.value=="")
+           {
+                alert("Enter Password");
+                return false;
+           }
+      return true;
+    }
+</script>
 <div id="container"> 
 	<div id="header">
     	<div id="logo"><a href="#"><img src="images/logo.png" width="376" height="109"  border="0"/></a></div>
         <div id="navigation">
         	<div id="top">
             
-            <div id="top_right"><img src="images/battery.png" width="92" height="29" />
-            <div class="loginbox"><form><input type="text" size="16" name="s" id="txtbox" value="Username" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" />
-            <input type="text" size="16" name="s" id="txtbox" value="Password" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" />
-<input type="submit" value="login" id="submit" /></form>
-					
-</div>
-				
+            <div id="top_right"><div style="float:left; width:165px;"><img src="images/insulinlevel.png" width="155" height="30" /></div>
+              <div style="float:left; width:132px;"><img src="images/battery.png" width="92" height="29" /></div>
+                <form name="login" method="post" action="Login.jsp" onsubmit="return val()">
+              <div class="loginbox"><input type="text" size="16" name="username" id="txtbox"  onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" />
+            <input type="text" size="16" name="password" id="txtbox"  onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" />
+<input type="submit" value="login" id="submit" /></div>
+</form>
+<div style="color: #FFFFFF;
+    float: right;
+    font-size: 15px;
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 198px; font-weight:bold;"><a href="RegisterUser.jsp">Sign up</a></div>
             </div>
             
-            </div>
-           			 
+          </div>
             
         </div>
     </div>
@@ -35,21 +57,15 @@
                         <li><a href="features.html">FEATURES</a></li>
                         <li><a href="contact.html">CONTACT US</a></li>
                     </ul>
-                    <tr>
-                    
-                        <td>&nbsp;</td>
-                        <td><a href="RegisterUser.jsp">New User Sign Up</a></td>
-                        
-                    </tr>	
                 </div>
             </div>
-    <div id="banner"><img src="images/banner.jpg" width="949" height="327" /></div>
-  <div id="content">
+    
+  <div id="innerpage_content">
 <div class="leftbox">
         	<h1>Welcome to Solarium Solar<br /><br />
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magnal.</h1>
 	  <div style="float:left; width:600px;">
-<p style="margin-top:0px; padding-top:0px;"> <img src="images/tslim_Front_High_View-e1347628517786.jpg" width="295" height="228" style="margin:0 10px 5px 0px; float:left;" />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera got
+<p style="margin-top:0px; padding-top:0px;"></p> <img src="images/tslim_Front_High_View-e1347628517786.jpg" width="295" height="228" style="margin:0 10px 5px 0px; float:left;" />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera got
 </div>
 	  <div class="clearfix"></div>
     </div>
@@ -94,38 +110,7 @@
 </div>
 <div id="footer">
 <div id="footermenu">
-<div id="footermain">  
-<div style="float:left;"><a href="index.html">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="about.html">ABOUT US</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="features.html">FEATURES</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="contact.html">CONTACT US</a></div>
-<div class="socialnt">CONNECT WITH   
-<a href="#"><img src="images/youtude.jpg" width="16" height="16" border="0" /></a>
-<a href="#"><img src="images/twitter.jpg" width="17" border="0" height="16" /></a>
-<a href="#"><img src="images/Fb.jpg" width="16" height="16" border="0" /></a>
-</div>
-</div>
-</div>
-<div id="footerlinks">
-<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tr>
-    <td width="367" valign="top">Lorem ipsum dolor sit amet, consectetue<br />
-      r adipiscing elit, sed diam nonummy nibh<br />
-euismod tincidunt ut laoreet dolore magna <br />
-aliquam erat volutpat. Ut wisi enim ad minim <br />
-veniam, quis nostrud exerci tation ullamcorper<br />
-suscipit lobortis nisl ut aliquip ex ea commodo consequat</td><br />
-    <td width="405" valign="top">
-   Lorem ipsum dolor sit amet, consectetuer adipiscing<br />
-elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore<br />
-magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis<br />
-nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat </td>
-    <td width="188" valign="top">Contact<br /> 
-      Address1
-<br />
-Address1
-<br />
-Customer Care :+91 00000000<br />
-Phone  : +91 -20000000<br /></td>
-  </tr>
-</table>
+
 <div style=" width:100%; text-align:center; color:#b7b6b4;">Allrights reserved &amp;  powered by DaibeKare</div>
 
 </div>

@@ -13,8 +13,6 @@ out.println(age);
 String sex=request.getParameter("sex");
 out.println(sex);
 
-
-
 boolean flag = dkbean.insertUserDetails(fname,lname,uname,pass,age,sex);
 out.println(flag);
 %>

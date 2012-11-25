@@ -20,6 +20,7 @@ import org.apache.log4j.Logger;
 *
 *
 */
+
 public class DiabeKareBean  {
 	private Logger log = Logger.getLogger("DiabeKarelogger");
 
@@ -72,6 +73,101 @@ public class DiabeKareBean  {
 	
 	/**
 	   *
+	   * @author Girish 
+	   * @date  11-25-2012
+	   * @function insertCurrentState
+	   * @purpose insert current state
+	   * @return null
+	   * @exception SQL Exception & Class Not Found Exception
+	   * @version 1.0
+	   *
+	   *
+	   *
+	   *
+	   */
+	   
+	
+public boolean insertCurrentState(String state_id, String current_battery, String current_insulin, String current_basal_profile) {
+		
+		boolean flag = false;
+
+		try {
+			Connection connection = dbConnection();
+			Statement statement = connection.createStatement();
+			statement.executeUpdate(" insert into current_state (state_id,current_battery,current_insulin,current_basal_profile) values ('"+ state_id + "','"+ battery + "','" + insulin + "','" + basal_profile + "') ");
+			flag = true;
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return flag;
+	}
+	
+	/**
+	 *	
+	 * @author Girish 
+	 * @date  11-25-2012
+	 * @function insertBasalProfile
+	 * @purpose insert basal profile
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+
+	public boolean insertBasalProfile(String basal_id, String hour, String basal_rate ) {
+		
+		boolean flag = false;
+
+		try {
+		
+			Connection connection = dbConnection();
+			Statement statement = connection.createStatement();			
+			statement.executeUpdate("insert into basal_profile(basal_id,hour,basal_rate) values('"+ basal_id+ "','"+ hour+ "','"+ basal_rate+ "')" );
+			flag = true;
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return flag;
+	}
+	
+	/**
+	   *
+	   * @author Girish 
+	   * @date  11-25-2012
+	   * @function insertBolusFoodConversionTable
+	   * @purpose insert bolus food conversion table
+	   * @return null
+	   * @exception SQL Exception & Class Not Found Exception
+	   * @version 1.0
+	   *
+	   *
+	   *
+	   *
+	   */
+	
+	public boolean insertBolusFoodConversionTable(String item_id, String food_item, String carbohydrates) {
+		
+		boolean flag = false;
+
+		try {
+		
+			Connection connection = dbConnection();
+			Statement statement = connection.createStatement();
+			
+			statement.executeUpdate("insert into bolus_food_conversion_table(item_id,food_item,carbohydrates) values('"+ item_id+ "','"+ food_item+ "','"+ carbohydrates+ "')");
+			flag = true;
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return flag;
+	}
+	
+	
+	/**
+	   *
 	   * @author Aakash Moni
 	   * @date  11-19-2012
 	   * @function login
@@ -84,6 +180,7 @@ public class DiabeKareBean  {
 	   *
 	   *
 	   */
+	
 	public boolean login(String username, String password)
 	{
 	   Connection con = dbConnection();

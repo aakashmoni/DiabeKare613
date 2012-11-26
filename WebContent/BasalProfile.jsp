@@ -16,7 +16,8 @@
 <div id="innerpage_content">
 <div class="leftbox">
         	<h1>Basal Profiles</h1>
-            <form action="BasalProfile_Process.jsp" name="f2" onSubmit="return ff()">
+
+<form action="BasalProfile_Process.jsp" name="f2" onSubmit="return ff()" method="get">
 <table border="0">
 
 	<tr>
@@ -39,7 +40,7 @@
 	</tr>
 
 	<tr>
-		<td align="center" class="txtstyle4">Basal ID</td>
+		<td align="center" class="txtstyle4">Basal Profile ID</td>
 		<td align="center" class="txtstyle4">Name</td>
 		<td align="center" class="txtstyle4">View / Edit Profile</td>
 		<td align="center" class="txtstyle4">Delete Profile</td>
@@ -59,7 +60,7 @@
 	<tr>
 		<!--<td align="center" class="txtstyle4"><%=value[0]%></td>-->
 		
-		<td align="center" class="txtstyle4"><input type="radio" name="sex" value=value[0]><%=value[0]%></td>
+		<td align="center" class="txtstyle4"><input type="radio" name="BID" value=value[0]><%=value[0]%></td>
 		<td align="center" class="txtstyle4"><%=value[1]%></td>
 		
 		<td align="center" class="txtstyle4">
@@ -78,8 +79,9 @@
 	<%
 		}
 	%>
-
+<tr>
 <td align="center" class="txtstyle4"><input type="submit" name="submit" value="Submit"></td>
+</tr>
 
 </table>
 

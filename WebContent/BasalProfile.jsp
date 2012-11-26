@@ -1,3 +1,5 @@
+<jsp:useBean id="dkbean" class="com.umd.app.diabekare.DiabeKareBean"/>
+<%@ page import="java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="DiabeKareHeader.html" %>
@@ -13,44 +15,52 @@
 <div id="container"> 
 <div id="innerpage_content">
 <div class="leftbox">
-        	<h1>Register User</h1>
-            <form action="RegisterUser_Process.jsp" name="f2" onSubmit="return ff()">
+        	<h1>Basal Profiles</h1>
+            <form action="BasalProfile_Process.jsp" name="f2" onSubmit="return ff()">
 <table border="0">
-<tr>
-	<td>Firstname:</td>
-	<td><input type="text" name="fname"><br>
-	</td>
-	</tr>
+
 	<tr>
-		<td>Lastname:</td>
-		<td><input type="text" name="lname"><br>
-		</td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
 	</tr>
+
 	<tr>
-		<td>Username:</td>
-		<td><input type="text" name="uname"><br>
-		</td>
+		<td align="right" class="txtstyle4">Basal ID</td>
+		<td align="right" class="txtstyle4">Class</td>
+		<td align="right" class="txtstyle4">Division</td>
+		<td align="right" class="txtstyle4">House</td>
 	</tr>
-	<tr>
-		<td>Password:</td>
-		<td><input type="password" name="pass"><br>
-		</td>
-	</tr>
-	<tr>
-		<td>Age:</td>
-		<td><input type="text" name="age"><br>
-		</td>
-	</tr>
-	<tr>
-		<td>Sex:</td>
-		<td><input type="text" name="sex"><br>
-		</td>
-	</tr>
-	
-	<tr>
-		
-		<td><input type="submit" name="submit" value="Register"></td>
-	</tr>
+
+	<%
+		ArrayList f = dkbean.getBasalProfiles();
+		for (int i = 0; i < f.size(); i++) {
+			String[] value = (String[]) f.get(i);
+	%>
+
+
+    
+
+
+
+
+
+  <tr>
+      <td align="right" class="txtstyle4"><%=value[0]%></td>
+      <td align="right" class="txtstyle4"><%=value[1]%></td>
+      <td align="right" class="txtstyle4"><%=value[2]%></td>
+      <td align="right" class="txtstyle4"><%=value[3]%></td>
+
+
+
+     
+  </tr>
+  <%
+  	}
+  %>
+  
+
 </table>
 </form>
     </div>

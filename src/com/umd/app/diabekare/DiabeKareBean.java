@@ -201,4 +201,33 @@ public boolean insertCurrentState(String state_id, String current_battery, Strin
 
 	        return flag;
 	}
+	
+	
+	
+	public ArrayList getBasalProfiles() {
+        Connection con = dbConnection();
+        ArrayList al = new ArrayList();
+        try {
+            PreparedStatement pst = con.prepareStatement("select * from basal_profile1");
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                String value[] = new String[5];
+                value[0] = rs.getString(1);
+                value[1] = rs.getString(2);
+                value[2] = rs.getString(3);
+                value[3] = rs.getString(4);
+
+                al.add(value);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return al;
+    }
+	
+	
 }
+
+
+

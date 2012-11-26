@@ -17,7 +17,7 @@
 <div class="leftbox">
         	<h1>Basal Profiles</h1>
 
-<form action="BasalProfile_Process.jsp" name="f2" onSubmit="return ff()" method="get">
+<form action="BasalProfile_Process.jsp"  method="get">
 <table border="0">
 
 	<tr>
@@ -29,7 +29,7 @@
 
 <tr>
 	<td align="center" class="txtstyle4">
-	<button type="button" onclick="alert('Hello world!')">Create New</button>
+	<button type="button" >Create New</button>
 	</td>
 </tr>
 <tr>
@@ -60,15 +60,15 @@
 	<tr>
 		<!--<td align="center" class="txtstyle4"><%=value[0]%></td>-->
 		
-		<td align="center" class="txtstyle4"><input type="radio" name="BID" value=value[0]><%=value[0]%></td>
+		<td align="center" class="txtstyle4"><input type="radio" name="basalPID" value= <%=value[0]%>></td>
 		<td align="center" class="txtstyle4"><%=value[1]%></td>
 		
 		<td align="center" class="txtstyle4">
-			<button type="button" onclick="alert('Hello world!')">View / Edit</button>
+			<button type="button">View / Edit</button>
 		</td>
 		
 		<td align="center" class="txtstyle4">
-			<button type="button" onclick="alert('Hello world!')">Delete</button>
+			<button type="button">Delete</button>
 		</td>
 		
 		<!--<td align="center" class="txtstyle4"><%=value[1]%></td>

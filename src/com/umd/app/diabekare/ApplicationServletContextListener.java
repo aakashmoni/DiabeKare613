@@ -1,8 +1,5 @@
 package com.umd.app.diabekare;
-
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
+import javax.servlet.*;
 
 import org.apache.log4j.PropertyConfigurator;
 

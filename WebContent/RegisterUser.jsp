@@ -47,6 +47,7 @@ else
 	return true;
 }
 </script>
+
 <div id="container"> 
 <div id="innerpage_content">
 <div class="leftbox">

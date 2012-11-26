@@ -26,11 +26,28 @@
 		<td width="20%">&nbsp;</td>
 	</tr>
 
+<tr>
+	<td align="center" class="txtstyle4">
+	<button type="button" onclick="alert('Hello world!')">Create New</button>
+	</td>
+</tr>
+<tr>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+	</tr>
+
 	<tr>
-		<td align="right" class="txtstyle4">Basal ID</td>
-		<td align="right" class="txtstyle4">Class</td>
-		<td align="right" class="txtstyle4">Division</td>
-		<td align="right" class="txtstyle4">House</td>
+		<td align="center" class="txtstyle4">Basal ID</td>
+		<td align="center" class="txtstyle4">Name</td>
+		<td align="center" class="txtstyle4">View / Edit Profile</td>
+		<td align="center" class="txtstyle4">Delete Profile</td>
+		
+		<!--<td align="center" class="txtstyle4">Class</td>
+		<td align="center" class="txtstyle4">Division</td>
+		<td align="center" class="txtstyle4">House</td>
+		-->
 	</tr>
 
 	<%
@@ -39,29 +56,33 @@
 			String[] value = (String[]) f.get(i);
 	%>
 
+	<tr>
+		<!--<td align="center" class="txtstyle4"><%=value[0]%></td>-->
+		
+		<td align="center" class="txtstyle4"><input type="radio" name="sex" value=value[0]><%=value[0]%></td>
+		<td align="center" class="txtstyle4"><%=value[1]%></td>
+		
+		<td align="center" class="txtstyle4">
+			<button type="button" onclick="alert('Hello world!')">View / Edit</button>
+		</td>
+		
+		<td align="center" class="txtstyle4">
+			<button type="button" onclick="alert('Hello world!')">Delete</button>
+		</td>
+		
+		<!--<td align="center" class="txtstyle4"><%=value[1]%></td>
+      <td align="center" class="txtstyle4"><%=value[2]%></td>
+      <td align="center" class="txtstyle4"><%=value[3]%></td>
+	  -->
+	</tr>
+	<%
+		}
+	%>
 
-    
-
-
-
-
-
-  <tr>
-      <td align="right" class="txtstyle4"><%=value[0]%></td>
-      <td align="right" class="txtstyle4"><%=value[1]%></td>
-      <td align="right" class="txtstyle4"><%=value[2]%></td>
-      <td align="right" class="txtstyle4"><%=value[3]%></td>
-
-
-
-     
-  </tr>
-  <%
-  	}
-  %>
-  
+<td align="center" class="txtstyle4"><input type="submit" name="submit" value="Submit"></td>
 
 </table>
+
 </form>
     </div>
    	<div class="clearfix"></div>

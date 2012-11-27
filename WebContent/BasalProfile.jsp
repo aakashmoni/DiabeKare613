@@ -32,11 +32,7 @@
 		<td width="20%">&nbsp;</td>
 	</tr>
 
-	<tr>
-		<td align="center" class="txtstyle4">
-		<button type="button">Create New</button>
-		</td>
-	</tr>
+	
 	<tr>
 		<td width="20%">&nbsp;</td>
 		<td width="20%">&nbsp;</td>

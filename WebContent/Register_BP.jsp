@@ -155,129 +155,129 @@ else
 <table border="0">
 
 	<tr>
-		<td>BP_Name:</td>
+		<td>Name:</td>
 		<td><input type="text" name="name"><br>
 		</td>
 	</tr>
 	
 	<tr>
-		<td>Rate@1:</td>
+		<td>Hour1:</td>
 		<td><input type="text" name="r1"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@2:</td>
+		<td>Hour2:</td>
 		<td><input type="text" name="r2"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@3:</td>
+		<td>Hour3:</td>
 		<td><input type="text" name="r3"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@4:</td>
+		<td>Hour4:</td>
 		<td><input type="text" name="r4"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@5:</td>
+		<td>Hour5:</td>
 		<td><input type="text" name="r5"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@6:</td>
+		<td>Hour6:</td>
 		<td><input type="text" name="r6"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@7:</td>
+		<td>Hour7:</td>
 		<td><input type="text" name="r7"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@8:</td>
+		<td>Hour8:</td>
 		<td><input type="text" name="r8"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@9:</td>
+		<td>Hour9:</td>
 		<td><input type="text" name="r9"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@10:</td>
+		<td>Hour10:</td>
 		<td><input type="text" name="r10"><br>
 		</td>
 	</tr>
 	
 	<tr>
-		<td>Rate@11:</td>
+		<td>Hour11:</td>
 		<td><input type="text" name="r11"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@12:</td>
+		<td>Hour12:</td>
 		<td><input type="text" name="r12"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@13:</td>
+		<td>Hour13:</td>
 		<td><input type="text" name="r13"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@14:</td>
+		<td>Hour14:</td>
 		<td><input type="text" name="r14"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@15:</td>
+		<td>Hour15:</td>
 		<td><input type="text" name="r15"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@16:</td>
+		<td>Hour16:</td>
 		<td><input type="text" name="r16"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@17:</td>
+		<td>Hour17:</td>
 		<td><input type="text" name="r17"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@18:</td>
+		<td>Hour18:</td>
 		<td><input type="text" name="r18"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@19:</td>
+		<td>Hour19:</td>
 		<td><input type="text" name="r19"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@20:</td>
+		<td>Hour20:</td>
 		<td><input type="text" name="r20"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@21:</td>
+		<td>Hour21:</td>
 		<td><input type="text" name="r21"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@22:</td>
+		<td>Hour22:</td>
 		<td><input type="text" name="r22"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@23:</td>
+		<td>Hour23:</td>
 		<td><input type="text" name="r23"><br>
 		</td>
 	</tr>
 	<tr>
-		<td>Rate@24:</td>
+		<td>Hour24:</td>
 		<td><input type="text" name="r24"><br>
 		</td>
 	</tr>

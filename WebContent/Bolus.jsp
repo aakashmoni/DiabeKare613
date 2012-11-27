@@ -1,108 +1,94 @@
+<jsp:useBean id="dkbean" class="com.umd.app.diabekare.DiabeKareBean" />
+<%@ page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ include file="DiabeKareHeader.html" %>
+	pageEncoding="ISO-8859-1"%>
+<%@ include file="DiabeKareHeader.html"%>
 <html>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Bolus</title>
+<title>Insert title here</title>
 </head>
 
 <body>
-<script language="javascript">
-function ff()
-{
-if(document.f2.carbs.value=="")
-{
-	alert("enter valid carb amount");
-	return false;
-}
-
-else
-	return true;
-}
-</script>
-
-<div id="this_is_main_page">
-   
-       <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-        <tr>
-            <td height="50" align="left" bgcolor="#2C92C6" class="hh"><h1>&nbsp;&nbsp;Enter Bolus </h1></td>
-        </tr>
-    </table>
-
-
-    <form action="bolus.jsp"name="f2" onSubmit="return ff()">
-
-        <table width="100%" border="0" align="center" cellspacing="10">
-            <tr>
-                <td width="40%">&nbsp;</td>
-                <td width="85%">&nbsp;</td>
-
-            </tr>
-
-            <tr>
-                <td align="right" class="txtstyle4">Enter Amount of Carbohydrates</td>
-                <td><input name="carbs" type="text" />   
-                 <input type="image" src="images/proceed.png" name="button" id="button" value="Submit" /> </td>
-            </tr>
-        </table> 
-    </form>
-    
-</div>
-
- 
+<div id="container">
 <div id="innerpage_content">
 <div class="leftbox">
-        	<h1>Select Food</h1>
-            <form action="bolus.jsp" name="f2" >
+<h1>Bolus</h1>
+
 <table border="0">
-<tr>
-	 <td><input type="radio" name="food" value="100"> Apple </td>
-		</tr>
+
 	<tr>
-		<td><input type="radio" name="food" value="200"> Mango </td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+	</tr>
+
+	
+	<tr>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td align="center" class="txtstyle4">Item Id</td>
+		<td align="center" class="txtstyle4"> Food Item </td>
+		<td align="center" class="txtstyle4"> Carbohydrates </td>
 	</tr>
 	
-			
+	<%
+		ArrayList BolusFoodConversionTable = dkbean.getBolusFoodConversionTable();
+		for (int i = 0; i < BolusFoodConversionTable.size(); i++) {
+			String[] value = (String[]) BolusFoodConversionTable.get(i);
+	%>
+	<td align="center" class="txtstyle4"><input type="radio" name="fooditemID" value=<%=value[0]%>></td>
+		<td align="center" class="txtstyle4"><%=value[1]%></td>
+		<td align="center" class="txtstyle4"><%=value[2]%></td>
+	
+		<%
+		}
+	%>
+	
+	<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+	<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+	
+	
+	
+</table>
+<table border="0"><!--
+
 	<tr>
-			<td><input type="submit" name="submit" value="Register"></td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+		<td width="20%">&nbsp;</td>
+	</tr>
+	--><tr>
+	<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	
+		<td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="Submit"></td>
+		
+		<td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="View/Edit" onclick="form.action='ViewEditBolusTable.jsp'"></td>
+			
+		<td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="Delete" onclick="form.action='DeleteBolusTable.jsp'"></td>		
 	</tr>
 </table>
+
+
 </form>
-    </div>
-   	<div class="clearfix"></div>
-    </div>
-    
-    <div id="Selecting_food_items">
-   
-       <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-        <tr>
-            <td height="50" align="left" bgcolor="#2C92C6" class="hh"><h1>&nbsp;&nbsp;Selecting food items </h1></td>
-        </tr>
-    </table>
-
-
-    <form action="bolus.jsp"name="f2" onSubmit="return ff()">
-
-        <table width="100%" border="0" align="center" cellspacing="10">
-            <tr>
-                <td width="40%">&nbsp;</td>
-                <td width="85%">&nbsp;</td>
-
-            </tr>
-
-            <tr>
-                <td align="right" class="txtstyle4">Total Carbs</td>
-                <td><input name=request.getparameter("food") type="text" />   
-                 <input type="image" src="images/proceed.png" name="button" id="button" value="Submit" /> </td>
-            </tr>
-        </table> 
-    </form>
-    
 </div>
-    
-
+<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+</div>
 </body>
-<%@ include file="DiabeKareFooter.html" %>
-</html>
+<%@ include file="DiabeKareFooter.html"%>
+</html>	
+		

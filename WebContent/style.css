@@ -56,3 +56,55 @@ a { text-decoration:none;}
 .ydm{padding: 10px 10px 10px ; }
 .td_border{background:url(images/border.jpg) repeat-y left;}
 .txt { background:#bbd9ea; border:#b2c8df solid 1px; }
+
+.meter-wrap{
+    position: relative;
+    left: 140px;
+}
+
+.meter-wrap, .meter-value, .meter-text {
+    /* The width and height of your image */
+    width: 155px; height: 30px;
+}
+
+.meter-wrap, .meter-value {
+    background: #bdbdbd url(images/insulinlevel.png) top left no-repeat;
+}
+
+.meter-text {
+    position: absolute;
+    top:0; left:0;
+
+    padding-top: 5px;
+
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.battery-wrap{
+    position: relative;
+    left: 150px;
+}
+
+.battery-wrap, .battery-value, .battery-text {
+    /* The width and height of your image */
+    width: 155px; height: 30px;
+}
+
+.battery-wrap, .battery-value {
+    background: #bdbdbd url(images/battery.png) top left no-repeat;
+}
+
+.battery-text {
+    position: absolute;
+    top:0; left:0;
+
+    padding-top: 5px;
+
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+

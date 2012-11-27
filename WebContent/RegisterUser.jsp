@@ -55,12 +55,12 @@ else
             <form action="RegisterUser_Process.jsp" name="f2" onSubmit="return ff()">
 <table border="0">
 <tr>
-	<td>Firstname:</td>
+	<td>First Name:</td>
 	<td><input type="text" name="fname"><br>
 	</td>
 	</tr>
 	<tr>
-		<td>Lastname:</td>
+		<td>Last Name:</td>
 		<td><input type="text" name="lname"><br>
 		</td>
 	</tr>

@@ -94,7 +94,7 @@ public boolean insertCurrentState(String state_id, String current_battery, Strin
 		try {
 			Connection connection = dbConnection();
 			Statement statement = connection.createStatement();
-			statement.executeUpdate(" insert into current_state (state_id,current_battery,current_insulin,current_basal_profile) values ('"+ state_id + "','"+ battery + "','" + insulin + "','" + basal_profile + "') ");
+			statement.executeUpdate(" insert into current_state (state_id,current_battery,current_insulin,current_basal_profile) values ('"+ state_id + "','"+ current_battery + "','" + current_insulin + "','" + current_basal_profile + "') ");
 			flag = true;
 		} catch (Exception e) {
 			System.out.println(e);

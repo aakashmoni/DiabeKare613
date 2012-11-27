@@ -70,20 +70,27 @@ String radio_value = request.getParameter("basalPID");
 		</td>
 	</tr>
 	
+	<%
+		
+		for (int j = 2; j < 24; j++) {
+		
+	%>
 	<tr>
 		<td align="center" class="txtstyle4">
-			<%=0 %>
+			<%=j -2 %>:00
 		</td>
 		
 		<td align="center" class="txtstyle4">
-			<input type="text" name="hour" value="<%=value[2]%>" />
+			<input type="text" name="hour" value=<%=value[j]%> />
 		</td>
 	</tr>
 	
-
 	
 	
 	
+	<%
+		}
+	%>
 	
 	<%
 		}

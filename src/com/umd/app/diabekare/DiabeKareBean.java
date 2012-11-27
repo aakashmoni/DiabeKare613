@@ -240,6 +240,43 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
         return al;
     }
 	
+	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-27-2012
+	 * @function insertintoFoodConversionDatabase
+	 * @purpose insertintoFoodConversionDatabase
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public ArrayList getBolusFoodConversionTable() {
+        Connection con = dbConnection();
+        ArrayList al = new ArrayList();
+        try {
+            PreparedStatement pst = con.prepareStatement("select * from bolus_food_conversion_table");
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                String value[] = new String[5];
+                value[0] = rs.getString(1);
+                value[1] = rs.getString(2);
+                value[2] = rs.getString(3);
+                
+                al.add(value);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return al;
+    }
+	
 
 	public boolean selectBasalProfile(String basalid)
 	{

@@ -103,36 +103,36 @@ public boolean insertCurrentState(String state_id, String current_battery, Strin
 		return flag;
 	}
 	
-	/**
-	 *	
-	 * @author Girish 
-	 * @date  11-25-2012
-	 * @function insertBasalProfile
-	 * @purpose insert basal profile
-	 * @return null
-	 * @exception SQL Exception & Class Not Found Exception
-	 * @version 1.0
-	 *
-	 *
-	 *
-	 *
-	 */
+/**
+ *	
+ * @author Girish 
+ * @date  11-25-2012
+ * @function insertBasalProfile
+ * @purpose inserts a new basal profile
+ * @return null
+ * @exception SQL Exception & Class Not Found Exception
+ * @version 1.0
+ *
+ *
+ *
+ *
+ */
 
-	public boolean insertBasalProfile(String basal_id, String hour, String basal_rate ) {
-		
-		boolean flag = false;
+public boolean insertBasalProfile(String name, String r1, String r2, String r3, String r4, String r5, String r6, String r7, String r8, String r9, String r10, String r11, String r12, String r13, String r14, String r15, String r16, String r17, String r18, String r19, String r20, String r21, String r22, String r23, String r24 ) {
+	
+	boolean flag = false;
 
-		try {
-		
-			Connection connection = dbConnection();
-			Statement statement = connection.createStatement();			
-			statement.executeUpdate("insert into basal_profile(basal_id,hour,basal_rate) values('"+ basal_id+ "','"+ hour+ "','"+ basal_rate+ "')" );
-			flag = true;
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-		return flag;
+	try {
+	
+		Connection connection = dbConnection();
+		Statement statement = connection.createStatement();			
+		statement.executeUpdate("insert into basal_profile1(Basal_Name,rate1,rate2,rate3,rate4,rate5,rate6,rate7,rate8,rate9,rate10,rate11,rate12,rate13,rate14,rate15,rate16,rate17,rate18,rate19,rate20,rate21,rate22,rate23,rate24) values('"+ name+ "','"+ r1+ "','"+ r2+ "','"+ r3+ "','"+ r4+ "','"+ r5+ "','"+ r6+ "','"+ r7+ "','"+ r8+ "','"+ r9+ "','"+ r10+ "','"+ r11+ "','"+ r12+ "','"+ r13+ "','"+ r14+ "','"+ r15+ "','"+ r16+ "','"+ r17+ "','"+ r18+ "','"+ r19+ "','"+ r20+ "','"+ r21+ "','"+ r22+ "','"+ r23+ "','"+ r24+ "')" );
+		flag = true;
+	} catch (Exception e) {
+		System.out.println(e);
 	}
+	return flag;
+}
 	
 	/**
 	   *

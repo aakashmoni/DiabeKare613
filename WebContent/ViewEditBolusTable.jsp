@@ -15,7 +15,7 @@ String radio_value = request.getParameter("fooditemID");
 
 <body>
 <div id="container">
-<div id="innerpage_content">
+<div id="innerpage_content"> 
 <div class="leftbox">
 <h1>Your Selected Bolus Food Item</h1>
 

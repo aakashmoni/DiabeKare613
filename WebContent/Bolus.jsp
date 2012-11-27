@@ -16,6 +16,8 @@
 <div class="leftbox">
 <h1>Bolus</h1>
 
+<form action="Bolus_Process.jsp" method="get">
+
 <table border="0">
 
 	<tr>

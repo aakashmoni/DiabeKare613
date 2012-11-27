@@ -322,6 +322,28 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	        return flag;
 	}
 	
+	public boolean deleteBolusTableItem(String fooditemID)
+	{
+	   Connection con = dbConnection();
+	   Boolean flag = false;
+	
+	   try {
+	            PreparedStatement pr = con.prepareStatement("DELETE FROM bolus_food_conversion_table WHERE item_id='"+fooditemID+"'");
+	            System.out.println("=========DELETE FROM bolus_food_conversion_table WHERE item_id='"+fooditemID+"'");
+	            log.debug("DiabeKareBean.Delete =========DELETE FROM bolus_food_conversion_table WHERE item_id='"+fooditemID+"'");
+	            rs1 = pr.executeUpdate();
+	            /*if(rs.next())
+	            {
+	            	flag = true;
+	            }*/
+
+	        } catch (SQLException sqle) {
+	            System.out.println("SQL Error :" + sqle);
+	        }
+
+	        return flag;
+	}
+	
 	
 	public ArrayList getSelectedBasalProfile(String basalid) {
         Connection con = dbConnection();

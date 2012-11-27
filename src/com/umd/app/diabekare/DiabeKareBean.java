@@ -228,9 +228,9 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
                 String value[] = new String[5];
                 value[0] = rs.getString(1);
                 value[1] = rs.getString(2);
-                value[2] = rs.getString(3);
-                value[3] = rs.getString(4);
-
+         //     value[2] = rs.getString(3);
+         //     value[3] = rs.getString(4);
+                
                 al.add(value);
             }
         } catch (SQLException e) {

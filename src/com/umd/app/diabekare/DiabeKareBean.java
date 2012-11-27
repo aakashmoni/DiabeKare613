@@ -26,6 +26,7 @@ public class DiabeKareBean  {
 
    Connection conn = null;
    ResultSet rs;
+   int rs1;
 
    public Connection dbConnection() {
        try {
@@ -202,7 +203,20 @@ public boolean insertCurrentState(String state_id, String current_battery, Strin
 	        return flag;
 	}
 	
-	
+	/**
+	 *	
+	 * @author Kunvar/Girish 
+	 * @date  11-25-2012
+	 * @function insertBasalProfile
+	 * @purpose insert basal profile
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
 	
 	public ArrayList getBasalProfiles() {
         Connection con = dbConnection();
@@ -225,6 +239,75 @@ public boolean insertCurrentState(String state_id, String current_battery, Strin
 
         return al;
     }
+	
+
+	public boolean selectBasalProfile(String basalid)
+	{
+	   Connection con = dbConnection();
+	   Boolean flag = false;
+	
+	   try {
+	            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET current_basal_profile='"+basalid+"' WHERE state_id='1' ");
+	            System.out.println("==========UPDATE current_state SET current_basal_profile="+basalid+" WHERE state_id=1");
+	            log.debug("DiabeKareBean.update basal profile==========UPDATE current_state SET current_basal_profile="+basalid+" WHERE state_id=1");
+	            rs1 = pr.executeUpdate();
+	            /*if(rs.next())
+	            {
+	            	flag = true;
+	            }*/
+
+	        } catch (SQLException sqle) {
+	            System.out.println("SQL Error :" + sqle);
+	        }
+
+	        return flag;
+	}
+	
+	public boolean deleteBasalProfile(String basalid)
+	{
+	   Connection con = dbConnection();
+	   Boolean flag = false;
+	
+	   try {
+	            PreparedStatement pr = con.prepareStatement("DELETE FROM basal_profile1 WHERE profile_id='"+basalid+"'");
+	            System.out.println("=========DELETE FROM basal_profile1 WHERE profile_id='"+basalid+"'");
+	            log.debug("DiabeKareBean.Delete basal profile==========DELETE FROM basal_profile1 WHERE profile_id='"+basalid+"'");
+	            rs1 = pr.executeUpdate();
+	            /*if(rs.next())
+	            {
+	            	flag = true;
+	            }*/
+
+	        } catch (SQLException sqle) {
+	            System.out.println("SQL Error :" + sqle);
+	        }
+
+	        return flag;
+	}
+	
+	
+	public ArrayList getSelectedBasalProfile(String basalid) {
+        Connection con = dbConnection();
+        ArrayList al = new ArrayList();
+        try {
+            PreparedStatement pst = con.prepareStatement("select * from basal_profile1 WHERE profile_id='"+basalid+"'");
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                String value[] = new String[5];
+                value[0] = rs.getString(1);
+                value[1] = rs.getString(2);
+                value[2] = rs.getString(3);
+                value[3] = rs.getString(4);
+
+                al.add(value);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return al;
+    }
+	
 	
 	
 }

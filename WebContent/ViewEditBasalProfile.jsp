@@ -9,15 +9,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-
+<%
+String radio_value = request.getParameter("basalPID");
+%>
 
 <body>
 <div id="container">
 <div id="innerpage_content">
 <div class="leftbox">
-<h1>Basal Profiles</h1>
+<h1>Your Selected Basal Profile</h1>
 
-<form action="BasalProfile_Process.jsp" method="get">
+<form action="BasalProfileUpdate.jsp" method="get">
 
 <table border="0">
 
@@ -27,48 +29,69 @@
 		<td width="20%">&nbsp;</td>
 		<td width="20%">&nbsp;</td>
 	</tr>
-
-	<tr>
-		<td align="center" class="txtstyle4">
-		<button type="button">Create New</button>
-		</td>
-	</tr>
 	<tr>
 		<td width="20%">&nbsp;</td>
 		<td width="20%">&nbsp;</td>
 		<td width="20%">&nbsp;</td>
 		<td width="20%">&nbsp;</td>
 	</tr>
-
-	<tr>
-		<td align="center" class="txtstyle4">Basal Profile ID</td>
-		<td align="center" class="txtstyle4">Name</td>
-		<!--<td align="center" class="txtstyle4">View / Edit Profile</td>
-		<td align="center" class="txtstyle4">Delete Profile</td>
-		
-	--></tr>
 
 	<%
-		ArrayList basalProfiles = dkbean.getBasalProfiles();
-		for (int i = 0; i < basalProfiles.size(); i++) {
-			String[] value = (String[]) basalProfiles.get(i);
+		ArrayList basalProfile = dkbean.getSelectedBasalProfile(radio_value);
+		for (int i = 0; i < basalProfile.size(); i++) {
+		String[] value = (String[]) basalProfile.get(i);
 	%>
 
 	<tr>
-		<!--<td align="center" class="txtstyle4"><%=value[0]%></td>-->
-
-		<td align="center" class="txtstyle4"><input type="radio" name="basalPID" value=<%=value[0]%>></td>
-		<td align="center" class="txtstyle4"><%=value[1]%></td>
-
-		<!--<td align="center" class="txtstyle4">
-			<button type="button">View / Edit</button>
+		<td align="left" class="txtstyle4">
+			Basal Profile ID: 		
 		</td>
-
+		<td align="left" class="txtstyle4">
+			<%=value[0]%>	
+		</td>
+	</tr>
+	
+		<tr>
+		<td align="left" class="txtstyle4">
+			Basal Profile Name: 		
+		</td>
+		<td align="left" class="txtstyle4">
+			<%=value[1]%>	
+		</td>
+	</tr>
+	
+	<tr>
 		<td align="center" class="txtstyle4">
-			<button type="button">Delete</button>
+			<b>Hour</b>
 		</td>
 		
-	--></tr>
+		<td align="center" class="txtstyle4">
+			<b>Basal Rate</b>
+		</td>
+	</tr>
+	
+	<%
+		
+		for (int j = 0; j < 24; j++) {
+		
+	%>
+	<tr>
+		<td align="center" class="txtstyle4">
+			<%=j %>
+		</td>
+		
+		<td align="center" class="txtstyle4">
+			<input type="text" name="hour" value="<%=value[j+2]%>" />
+		</td>
+	</tr>
+	
+	<%
+		}
+	%>
+	
+	
+	
+	
 	<%
 		}
 	%>
@@ -112,3 +135,4 @@
 </body>
 <%@ include file="DiabeKareFooter.html"%>
 </html>
+

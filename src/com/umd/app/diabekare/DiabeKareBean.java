@@ -293,12 +293,10 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
             PreparedStatement pst = con.prepareStatement("select * from basal_profile1 WHERE profile_id='"+basalid+"'");
             rs = pst.executeQuery();
             while (rs.next()) {
-                String value[] = new String[5];
-                value[0] = rs.getString(1);
-                value[1] = rs.getString(2);
-                value[2] = rs.getString(3);
-                value[3] = rs.getString(4);
-
+                String value[] = new String[26];
+                for(int i = 0; i<26;i++){
+                	value[i] = rs.getString(i+1);        
+                }
                 al.add(value);
             }
         } catch (SQLException e) {

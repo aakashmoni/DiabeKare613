@@ -72,7 +72,7 @@ String radio_value = request.getParameter("basalPID");
 	
 	<%
 		
-		for (int j = 2; j < 24; j++) {
+		for (int j = 2; j < 26; j++) {
 		
 	%>
 	<tr>

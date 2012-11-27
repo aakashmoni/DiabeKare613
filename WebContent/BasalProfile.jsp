@@ -17,6 +17,10 @@
 <div class="leftbox">
 <h1>Basal Profiles</h1>
 
+<form action="Register_BP.jsp" method="get">
+<button name="subject" type="submit" value="fav_HTML">Create New</button>
+</form>
+
 <form action="BasalProfile_Process.jsp" method="get">
 
 <table border="0">

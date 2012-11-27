@@ -150,7 +150,7 @@ else
 <div id="container"> 
 <div id="innerpage_content">
 <div class="leftbox">
-        	<h1>Register A New Basal Profile</h1>
+        	<h1>Register New Basal Profile</h1>
             <form action="RegisterBP_Process.jsp" name="f2" onSubmit="return ff()">
 <table border="0">
 
@@ -162,7 +162,7 @@ else
 	
 	<tr>
 		<td>Rate@1:</td>
-		<td><input type="password" name="r1"><br>
+		<td><input type="text" name="r1"><br>
 		</td>
 	</tr>
 	<tr>
@@ -213,7 +213,7 @@ else
 	
 	<tr>
 		<td>Rate@11:</td>
-		<td><input type="password" name="r11"><br>
+		<td><input type="text" name="r11"><br>
 		</td>
 	</tr>
 	<tr>

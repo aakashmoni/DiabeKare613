@@ -107,4 +107,54 @@ a { text-decoration:none;}
     width: 100%;
 }
 
+#success_img {
+	background-image: url(images/true.png);
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 83px;
+	float: left;
+}
+#success_text {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	height: 50px;
+	width: 300px;
+	float: left;
+	margin-top: 20px;
+	text-align: right;
+	text-transform: capitalize;
+}
+
+#failure_img {
+	background-image: url(images/failure.png);
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 83px;
+	float: left;
+}
+#failure {
+	height: 77px;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #b6ca7f;
+}
+#sample {
+	height: 100px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#success {
+	background-color: #b6ca7f;
+	height: 77px;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 

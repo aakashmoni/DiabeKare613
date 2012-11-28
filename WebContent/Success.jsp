@@ -10,11 +10,6 @@
 
 <body>
 
-
-
-
-
-
 <div id="message">
 <div id="sample"></div>
 <table>
@@ -44,17 +39,13 @@
 	<tr>
 		<TD>&nbsp;</TD>
 	</tr>
-	
+
 </table>
 <div id="success">
 <div id="success_img"></div>
 <div id="success_text">Success..!!</div>
 </div>
 </div>
-
-
-
-
 
 </body>
 

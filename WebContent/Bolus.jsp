@@ -46,10 +46,11 @@
 		for (int i = 0; i < BolusFoodConversionTable.size(); i++) {
 			String[] value = (String[]) BolusFoodConversionTable.get(i);
 	%>
+	<tr>
 	<td align="center" class="txtstyle4"><input type="radio" name="fooditemID" value=<%=value[0]%>></td>
 		<td align="center" class="txtstyle4"><%=value[1]%></td>
 		<td align="center" class="txtstyle4"><%=value[2]%></td>
-	
+	</tr>
 		<%
 		}
 	%>

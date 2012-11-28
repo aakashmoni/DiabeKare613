@@ -7,13 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-
 <body>
-
-
-
-
-
 
 <div id="message">
 <div id="sample"></div>
@@ -44,17 +38,13 @@
 	<tr>
 		<TD>&nbsp;</TD>
 	</tr>
-	
+
 </table>
-<div id="success">
-<div id="success_img"></div>
-<div id="success_text">Success..!!</div>
+<div id="failure">
+<div id="failure_img"></div>
+<div id="success_text">Failure Try again</div>
 </div>
 </div>
-
-
-
-
 
 </body>
 

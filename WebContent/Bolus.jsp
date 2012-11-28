@@ -75,6 +75,9 @@
 	
 		<td align="center" class="txtstyle4"><input type="submit"
 			name="submit" value="Submit"></td>
+			
+			<td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="Add Item" onclick="form.action='AddItemToBolusTable.jsp'"></td>
 		
 		<td align="center" class="txtstyle4"><input type="submit"
 			name="submit" value="View/Edit" onclick="form.action='ViewEditBolusTable.jsp'"></td>

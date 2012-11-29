@@ -31,18 +31,34 @@
 	<tr>
 		<TD>&nbsp;</TD>
 	</tr>
-
-	<tr>
+<tr>
 		<TD>&nbsp;</TD>
 	</tr>
-	<tr>
+<tr>
+		<TD>&nbsp;</TD>
+	</tr>
+<tr>
+		<TD>&nbsp;</TD>
+	</tr>
+<tr>
+		<TD>&nbsp;</TD>
+	</tr>
+<tr>
+		<TD>&nbsp;</TD>
+	</tr>
+<tr>
+		<TD>&nbsp;</TD>
+	</tr>
+
+
+<tr>
 		<TD>&nbsp;</TD>
 	</tr>
 
 </table>
 <div id="failure">
 <div id="failure_img"></div>
-<div id="success_text">Failure Try again</div>
+<div id="success_text"><p style="color: red";> Failure Try again </p> </div>
 </div>
 </div>
 

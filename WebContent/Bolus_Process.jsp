@@ -9,10 +9,10 @@ String carbs_str = dkbean.submitBolus(radio_value);
 int insulin = carbs/10;
 int max_insulin = 100;
 if (insulin <= max_insulin){
-	out.println("Bolus given");
+	response.sendRedirect("Success_bolus.jsp");
 }
 if (insulin > max_insulin){
-		out.println("Bolus exceeds max limit");
+	response.sendRedirect("Failure_bolus.jsp");
 }
 
 %>

@@ -80,7 +80,7 @@
 			name="submit" value="Add Item" onclick="form.action='AddItemToBolusTable.jsp'"></td>
 		
 		<td align="center" class="txtstyle4"><input type="submit"
-			name="submit" value="View" onclick="form.action='ViewEditBolusTable.jsp'"></td>
+			name="submit" value="View" onclick="form.action='ViewBolusTable.jsp'"></td>
 			
 		<td align="center" class="txtstyle4"><input type="submit"
 			name="submit" value="Delete" onclick="form.action='DeleteBolusTableItem.jsp'"></td>		

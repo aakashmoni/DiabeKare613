@@ -2,4 +2,17 @@
 <%
 String radio_value = request.getParameter("fooditemID");
 //out.println(radio_value);
+
+String carbs_str = dkbean.submitBolus(radio_value);
+//out.println(carbs);
+ int carbs = Integer.parseInt( carbs_str );
+int insulin = carbs/10;
+int max_insulin = 100;
+if (insulin <= max_insulin){
+	out.println("Bolus given");
+}
+if (insulin > max_insulin){
+		out.println("Bolus exceeds max limit");
+}
+
 %>

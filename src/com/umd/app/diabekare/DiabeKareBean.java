@@ -300,6 +300,46 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	        return flag;
 	}
 	
+	
+	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-28-2012
+	 * @function submitBolus
+	 * @purpose submitBolus
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public String submitBolus(String fooditem_id)
+	{
+		   Connection con = dbConnection();
+	        String a = "";
+	        try {
+	            PreparedStatement pst = con.prepareStatement("select * from bolus_food_conversion_table WHERE item_id='"+fooditem_id+"'");
+	            rs = pst.executeQuery();
+	            while (rs.next()) {
+	                String value[] = new String[3];
+	                for(int i = 0; i<3;i++){
+	                	value[i] = rs.getString(i+1);        
+	                }
+	                a =  value[2];
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+
+	        return a;
+	}
+	
+	
+	
 	public boolean deleteBasalProfile(String basalid)
 	{
 	   Connection con = dbConnection();
@@ -321,6 +361,21 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 
 	        return flag;
 	}
+	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-28-2012
+	 * @function Delete Bolus Table Item
+	 * @purpose Delete Bolus Table Item
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
 	
 	public boolean deleteBolusTableItem(String fooditemID)
 	{

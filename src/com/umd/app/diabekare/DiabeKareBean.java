@@ -125,8 +125,11 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	try {
 	
 		Connection connection = dbConnection();
-		Statement statement = connection.createStatement();			
-		statement.executeUpdate("insert into basal_profile1(Basal_Name,rate1,rate2,rate3,rate4,rate5,rate6,rate7,rate8,rate9,rate10,rate11,rate12,rate13,rate14,rate15,rate16,rate17,rate18,rate19,rate20,rate21,rate22,rate23,rate24) values('"+ name+ "','"+ r1+ "','"+ r2+ "','"+ r3+ "','"+ r4+ "','"+ r5+ "','"+ r6+ "','"+ r7+ "','"+ r8+ "','"+ r9+ "','"+ r10+ "','"+ r11+ "','"+ r12+ "','"+ r13+ "','"+ r14+ "','"+ r15+ "','"+ r16+ "','"+ r17+ "','"+ r18+ "','"+ r19+ "','"+ r20+ "','"+ r21+ "','"+ r22+ "','"+ r23+ "','"+ r24+ "')" );
+		Statement statement = connection.createStatement();		
+		System.out.println("=========Create in basal_profile1 WHERE profile_id='"+name+"'");
+        log.debug("DiabeKareBean.create basal profile==========create in basal_profile1 WHERE profile_name='"+name+"'");
+		
+        statement.executeUpdate("insert into basal_profile1(name,rate0,rate1,rate2,rate3,rate4,rate5,rate6,rate7,rate8,rate9,rate10,rate11,rate12,rate13,rate14,rate15,rate16,rate17,rate18,rate19,rate20,rate21,rate22,rate23) values('"+ name+ "','"+ r1+ "','"+ r2+ "','"+ r3+ "','"+ r4+ "','"+ r5+ "','"+ r6+ "','"+ r7+ "','"+ r8+ "','"+ r9+ "','"+ r10+ "','"+ r11+ "','"+ r12+ "','"+ r13+ "','"+ r14+ "','"+ r15+ "','"+ r16+ "','"+ r17+ "','"+ r18+ "','"+ r19+ "','"+ r20+ "','"+ r21+ "','"+ r22+ "','"+ r23+ "','"+ r24+ "')" );
 		flag = true;
 	} catch (Exception e) {
 		System.out.println(e);

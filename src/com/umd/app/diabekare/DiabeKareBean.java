@@ -280,7 +280,20 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
         return al;
     }
 	
-
+	/**
+	*
+	* @author Kunvar
+	* @date  11-17-2012
+	* @function dBConnection
+	* @purpose Database Connection
+	* @return Connection object
+	* @exception SQL Exception & Class Not Found Exception
+	* @version 1.0
+	*
+	*
+	*
+	*
+	*/
 	public boolean selectBasalProfile(String basalid)
 	{
 	   Connection con = dbConnection();
@@ -341,7 +354,20 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	        return a;
 	}
 	
-	
+	/**
+	*
+	* @author Kunvar
+	* @date  11-17-2012
+	* @function dBConnection
+	* @purpose Database Connection
+	* @return Connection object
+	* @exception SQL Exception & Class Not Found Exception
+	* @version 1.0
+	*
+	*
+	*
+	*
+	*/
 	
 	public boolean deleteBasalProfile(String basalid)
 	{
@@ -402,7 +428,20 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	        return flag;
 	}
 	
-	
+	/**
+	*
+	* @author Kunvar
+	* @date  11-17-2012
+	* @function dBConnection
+	* @purpose Database Connection
+	* @return Connection object
+	* @exception SQL Exception & Class Not Found Exception
+	* @version 1.0
+	*
+	*
+	*
+	*
+	*/
 	public ArrayList getSelectedBasalProfile(String basalid) {
         Connection con = dbConnection();
         ArrayList al = new ArrayList();
@@ -422,6 +461,7 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 
         return al;
     }
+
 	
 	/**
 	 *	
@@ -457,6 +497,38 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
         return al;
     }
 	
+
+	/**
+	*
+	* @author Kunvar
+	* @date  11-17-2012
+	* @function dBConnection
+	* @purpose Database Connection
+	* @return Connection object
+	* @exception SQL Exception & Class Not Found Exception
+	* @version 1.0
+	*
+	*
+	*
+	*
+	*/
+	public boolean UpdateBasalProfile(String id, String name, String r1, String r2, String r3, String r4, String r5, String r6, String r7, String r8, String r9, String r10, String r11, String r12, String r13, String r14, String r15, String r16, String r17, String r18, String r19, String r20, String r21, String r22, String r23, String r24 ) {
+		
+		boolean flag = false;
+
+		try {
+		
+			Connection connection = dbConnection();
+			Statement statement = connection.createStatement();			
+			statement.executeUpdate("UPDATE basal_profile1 SET name='"+name+"',rate0= '"+r1+"',rate1='"+r2+"',rate2='"+r3+"',rate3='"+r4+"',rate4='"+r5+"',rate5='"+r6+"',rate6='"+r7+"',rate7='"+r8+"',rate8='"+r9+"',rate9='"+r10+"',rate10='"+r11+"',rate11='"+r12+"',rate12='"+r13+"',rate13='"+r14+"',rate14='"+r15+"',rate15='"+r16+"',rate16='"+r17+"',rate17='"+r18+"',rate18='"+r19+"',rate19='"+r20+"',rate20='"+r21+"',rate21='"+r22+"',rate22='"+r23+"',rate23='"+r24+"' WHERE profile_id="+id);
+			 log.debug("DiabeKareBean.UPDATE basal profile1 ====SET name='"+name+"',rate0= '"+r1+"',rate1='"+r2+"',rate2='"+r3+"',rate3='"+r4+"',rate4='"+r5+"',rate5='"+r6+"',rate6='"+r7+"',rate7='"+r8+"',rate8='"+r9+"',rate9='"+r10+"',rate10='"+r11+"',rate11='"+r12+"',rate12='"+r13+"',rate13='"+r14+"',rate14='"+r15+"',rate15='"+r16+"',rate16='"+r17+"',rate17='"+r18+"',rate18='"+r19+"',rate19='"+r20+"',rate20='"+r21+"',rate21='"+r22+"',rate22='"+r23+"',rate23='"+r24+"' WHERE profile_id="+id);
+			flag = true;
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return flag;
+	}
+
 	
 }
 

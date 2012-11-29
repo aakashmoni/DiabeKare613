@@ -39,7 +39,8 @@ String radio_value = request.getParameter("basalPID");
 	<%
 		ArrayList basalProfile = dkbean.getSelectedBasalProfile(radio_value);
 		for (int i = 0; i < basalProfile.size(); i++) {
-		String[] value = (String[]) basalProfile.get(i);
+		String[] value = (String[]) basalProfile.get(i);		
+		
 	%>
 
 	<tr>
@@ -49,14 +50,15 @@ String radio_value = request.getParameter("basalPID");
 		<td align="left" class="txtstyle4">
 			<%=value[0]%>	
 		</td>
+		
 	</tr>
 	
 		<tr>
 		<td align="left" class="txtstyle4">
 			Basal Profile Name: 		
 		</td>
-		<td align="left" class="txtstyle4">
-			<%=value[1]%>	
+		<td align="center" class="txtstyle4">
+			<input type="text" name=<%=value[1]%> value=<%=value[1]%> />
 		</td>
 	</tr>
 	
@@ -77,15 +79,19 @@ String radio_value = request.getParameter("basalPID");
 	%>
 	<tr>
 		<td align="center" class="txtstyle4">
-			<%=j -2 %>:00
+			<% if(j-2 < 10){%>
+			 0<%=j -2 %>:00<%
+			}else{
+				%><%=j -2 %>:00<%
+			}%>
 		</td>
 		
 		<td align="center" class="txtstyle4">
-			<input type="text" name="hour" value=<%=value[j]%> />
+			<input type="text" name=<%=value[j]%> value=<%=value[j]%> />
 		</td>
 	</tr>
 	
-	
+	<%session.setAttribute( "myArray", value ); %>
 	
 	
 	<%

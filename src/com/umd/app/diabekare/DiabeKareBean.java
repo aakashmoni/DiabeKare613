@@ -420,6 +420,39 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
         return al;
     }
 	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-28-2012
+	 * @function Get Selected Bolus Table Item
+	 * @purpose Get Selected Bolus Table Item
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	public ArrayList getSelectedBolusTableItem(String fooditem_id) {
+        Connection con = dbConnection();
+        ArrayList al = new ArrayList();
+        try {
+            PreparedStatement pst = con.prepareStatement("select * from bolus_food_conversion_table WHERE item_id='"+fooditem_id+"'");
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                String value[] = new String[3];
+                for(int i = 0; i<3;i++){
+                	value[i] = rs.getString(i+1);        
+                }
+                al.add(value);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return al;
+    }
 	
 	
 }

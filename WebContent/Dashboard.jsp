@@ -26,7 +26,7 @@
 </script>
 <div id="container"> 
 	<div id="header">
-    	<div id="logo"><a href="#"><img src="images/newlogo.gif" width="330" height="120"  border="0"/></a></div>
+    	<div id="logo"><a href="#"><img src="images/logo.png" width="330" height="120"  border="0"/></a></div>
         <div id="navigation">
         	<div id="top">
             
@@ -44,6 +44,14 @@
         </div>
     </div>
 </div></div>
+
+<div style="color: #FFFFFF;
+    float: right;
+    font-size: 20px;
+    margin-right: 1px;
+    margin-top: 25px;
+    width: 210px; font-weight:bold;"><a href="logout.jsp"><p style="color: #FBF8EF">Logout</p></a></div>
+           
                 
 
             </div>

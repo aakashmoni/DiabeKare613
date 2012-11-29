@@ -149,7 +149,7 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	   *
 	   */
 	
-	public boolean insertBolusFoodConversionTable(String item_id, String food_item, String carbohydrates) {
+	public boolean insertBolusFoodConversionTable(String food_item, String carbohydrates) {
 		
 		boolean flag = false;
 
@@ -158,7 +158,7 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 			Connection connection = dbConnection();
 			Statement statement = connection.createStatement();
 			
-			statement.executeUpdate("insert into bolus_food_conversion_table(item_id,food_item,carbohydrates) values('"+ item_id+ "','"+ food_item+ "','"+ carbohydrates+ "')");
+			statement.executeUpdate("insert into bolus_food_conversion_table(food_item,carbohydrates) values('"+ food_item+ "','"+ carbohydrates+ "')");
 			flag = true;
 		} catch (Exception e) {
 			System.out.println(e);

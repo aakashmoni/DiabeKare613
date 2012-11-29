@@ -16,6 +16,25 @@
 <div class="leftbox">
 <h1>Bolus</h1>
 
+<form action="Bolus_Process_Textbox.jsp" method="get">
+<table border="0">
+<tr>
+		<td>Carbohydrates:</td>
+		<td><input type="text" name="Carbohydrates"  ><br>
+		</td>
+	</tr>
+<tr>
+<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="Submit"></td>
+			</tr>
+			</table>
+			</form>
+	
+	
+	
+
 <form action="Bolus_Process.jsp" method="get">
 
 <table border="0">
@@ -79,10 +98,7 @@
 			<td align="center" class="txtstyle4"><input type="submit"
 			name="submit" value="Add Item" onclick="form.action='AddItemToBolusTable.jsp'"></td>
 		
-		<td align="center" class="txtstyle4"><input type="submit"
-			name="submit" value="View" onclick="form.action='ViewBolusTable.jsp'"></td>
-			
-		<td align="center" class="txtstyle4"><input type="submit"
+	        <td align="center" class="txtstyle4"><input type="submit"
 			name="submit" value="Delete" onclick="form.action='DeleteBolusTableItem.jsp'"></td>		
 	</tr>
 </table>

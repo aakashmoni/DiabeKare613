@@ -14,12 +14,6 @@
 function ff()
 {
 
-if(document.f2.Item Id.value=="")
-{
-	alert("enter valid Item Id");
-	return false;
-}
-
 if(document.f2.Food Item.value=="")
 {
 	alert("enter valid Food Item name");
@@ -44,12 +38,7 @@ else
             <form action="AddItemToBolusTable_Process.jsp" name="f2" onSubmit="return ff()">
 <table border="0">
 
-	<tr>
-		<td>Item Id</td>
-		<td><input type="text" name="Item Id"><br>
-		</td>
-	</tr>
-	
+
 	<tr>
 		<td>Food Item</td>
 		<td><input type="text" name="Food Item"><br>

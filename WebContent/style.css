@@ -4,7 +4,7 @@ a { text-decoration:none;}
 #container { width:960px; margin:0 auto; height:auto;}
 #header { width:960px; float:left; height:100px;}
 #header a{ color:#fdb700;} 
-#logo { height:120px; float:left; width:376px;}
+#logo { height:120px; float:left; width:330px;}
 #navigation { float:left; width:500px; height:158px;}
 #top { float:left; width:600px; height:113px;}
 #menubar { float:left; width:960px; height:40px; }
@@ -118,7 +118,7 @@ a { text-decoration:none;}
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 20px;
 	font-weight: bold;
-	color: #FFFFFF;
+	color: #31B404;
 	text-decoration: none;
 	height: 50px;
 	width: 300px;
@@ -150,7 +150,7 @@ a { text-decoration:none;}
 }
 
 #success {
-	background-color: #b6ca7f;
+	background-color: #e7e9eb;
 	height: 77px;
 	width: 80%;
 	margin-right: auto;

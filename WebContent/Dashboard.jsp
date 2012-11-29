@@ -26,7 +26,7 @@
 </script>
 <div id="container"> 
 	<div id="header">
-    	<div id="logo"><a href="#"><img src="images/logo.png" width="376" height="109"  border="0"/></a></div>
+    	<div id="logo"><a href="#"><img src="images/newlogo.gif" width="376" height="120"  border="0"/></a></div>
         <div id="navigation">
         	<div id="top">
             

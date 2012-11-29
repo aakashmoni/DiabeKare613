@@ -4,7 +4,7 @@ a { text-decoration:none;}
 #container { width:960px; margin:0 auto; height:auto;}
 #header { width:960px; float:left; height:100px;}
 #header a{ color:#fdb700;} 
-#logo { height:109px; float:left; width:376px;}
+#logo { height:120px; float:left; width:376px;}
 #navigation { float:left; width:500px; height:158px;}
 #top { float:left; width:600px; height:113px;}
 #menubar { float:left; width:960px; height:40px; }

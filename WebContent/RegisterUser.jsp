@@ -10,8 +10,10 @@
 
 <body>
 <script language="javascript">
+
 function ff()
-{
+{	
+	var i = parseInt(document.f2.age.value);
 if(document.f2.fname.value=="")
 {
 	alert("enter valid first name");
@@ -32,12 +34,18 @@ if(document.f2.pass.value=="")
 	alert("enter valid password");
 	return false;
 }
-if(document.f2.age.value=="")
+if(isNaN(i))
+{
+	alert("enter correct age");
+	return false;
+}
+if(i<1 ||i>100)
 {
 	alert("enter valid age");
 	return false;
 }
-if(document.f2.sex.value=="")
+
+if(document.f2.sex.value=="" || !document.f2.sex.value=="male" || !document.f2.sex.value=="female")
 {
 	alert("enter valid sex");
 	return false;
@@ -81,8 +89,8 @@ else
 	</tr>
 	<tr>
 		<td>Sex:</td>
-		<td><input type="text" name="sex"><br>
-		</td>
+		<td> Male:<input type="radio" name="sex" value="male"><br></td>
+		<td> Female:<input type="radio" name="sex" value="female"><br></td>
 	</tr>
 	
 	<tr>

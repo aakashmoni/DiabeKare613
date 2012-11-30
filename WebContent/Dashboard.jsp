@@ -26,7 +26,7 @@
 </script>
 <div id="container"> 
 	<div id="header">
-    	<div id="logo"><a href="#"><img src="images/newlogo.gif" width="330" height="120"  border="0"/></a></div>
+    	<div id="logo"><a href="#"><img src="images/logo.png" width="330" height="120"  border="0"/></a></div>
         <div id="navigation">
         	<div id="top">
             
@@ -44,6 +44,14 @@
         </div>
     </div>
 </div></div>
+
+<div style="color: #FFFFFF;
+    float: right;
+    font-size: 20px;
+    margin-right: 1px;
+    margin-top: 25px;
+    width: 210px; font-weight:bold;"><a href="logout.jsp"><p style="color: #FBF8EF">Logout</p></a></div>
+           
                 
 
             </div>
@@ -63,7 +71,7 @@
     <div id="menubar">
             	<div id="topmenu">
 			    <ul>
-                    	<li><a href="index.html">HOME</a></li>
+                    	<li><a href="Dashboard.jsp">HOME</a></li>
                         <li><a href="BasalProfile.jsp">BASAL PROFILE</a></li>
                         <li><a href="Bolus.jsp">BOLUS</a></li>
                         <li><a href="Settings.jsp">SETTINGS</a></li>
@@ -84,10 +92,39 @@
         <h2>Options</h2>
         <div class="features">
         	<ul>
-            	<li><a href"test.jsp">Link to test</a></li>
-                <li>Lorem ipsum dolor sit amet</li> 
-                <li><a href="BasalProfile.jsp">BASAL PROFILE PAGE</a></li>
-            </ul>
+                          
+                </ul>     
+                <table>
+                <tr>
+               	<td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="Self Test" onclick="form.action='self_test.jsp'"></td>
+				</tr>
+                <tr>	
+                <td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="Clock Fail" onclick="form.action='clock_fail.jsp'"></td>
+			 <td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="Clock Fix" onclick="form.action='clock_fix.jsp'"></td>
+			 <td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="Clock Test" onclick="form.action='clock_test.jsp'"></td>
+			</tr>
+			<tr>
+			   <td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="ECU Fail" onclick="form.action='ecu_fail.jsp'"></td>
+			 <td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="ECU Fix" onclick="form.action='ecu_fix.jsp'"></td>
+			 <td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="ECU Test" onclick="form.action='ecu_test.jsp'"></td>
+			</tr>
+			<tr>
+			   <td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="H/W Fail" onclick="form.action='hardware_fail.jsp'"></td>
+			 <td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="H/W Fix" onclick="form.action='hardware_fix.jsp'"></td>
+			 <td align="center" class="txtstyle4"><input type="submit"
+			name="submit" value="H/W Test" onclick="form.action='hardware_test.jsp'"></td>
+			</tr>
+			</table>
+			
         </div>
         <div style="margin-top:10px; float:left;">
         sidebar
@@ -95,8 +132,7 @@
         
         <div class="application">
             <ul>
-            	<li>Lorem ipsum dolor sit amet</li>
-            	<li><a href="Bolus.jsp">BOLUS PAGE</a></li>     
+            	    
             </ul>
         </div>
     </div>

@@ -16,78 +16,78 @@ function ff()
 
 if(document.f2.name.value=="")
 {
-	alert("enter valid name");
+	alert("enter valid basal name");
 	return false;
 }
 
 if(document.f2.r1.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate1");
 	return false;
 }
 if(document.f2.r2.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate2");
 	return false;
 }
 if(document.f2.r3.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate3");
 	return false;
 }
 if(document.f2.r4.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate4");
 	return false;
 }
 if(document.f2.r5.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate5");
 	return false;
 }
 if(document.f2.r6.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate6");
 	return false;
 }
 if(document.f2.r7.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate7");
 	return false;
 }
 if(document.f2.r8.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate8");
 	return false;
 }
 if(document.f2.r9.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate9");
 	return false;
 }
 if(document.f2.r10.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate10");
 	return false;
 }
 if(document.f2.r11.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate11");
 	return false;
 }
 if(document.f2.r12.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate12");
 	return false;
 }
 if(document.f2.r13.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate13");
 	return false;
 }
 if(document.f2.r14.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate14");
 	return false;
 }
 if(document.f2.r15.value=="")

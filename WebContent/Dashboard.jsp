@@ -71,7 +71,7 @@
     <div id="menubar">
             	<div id="topmenu">
 			    <ul>
-                    	<li><a href="index.html">HOME</a></li>
+                    	<li><a href="Dashboard.jsp">HOME</a></li>
                         <li><a href="BasalProfile.jsp">BASAL PROFILE</a></li>
                         <li><a href="Bolus.jsp">BOLUS</a></li>
                         <li><a href="Settings.jsp">SETTINGS</a></li>

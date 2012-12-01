@@ -45,20 +45,20 @@ String radio_value = request.getParameter("basalPID");
 
 	<tr>
 		<td align="left" class="txtstyle4">
-			Basal Profile ID: 		
+			 		
 		</td>
 		<td align="left" class="txtstyle4">
-			<%=value[0]%>	
+			<input type="hidden" name="id" value=<%=value[0]%> />
 		</td>
 		
 	</tr>
 	
 		<tr>
-		<td align="left" class="txtstyle4">
+		<td align="left"" class="txtstyle4">
 			Basal Profile Name: 		
 		</td>
-		<td align="center" class="txtstyle4">
-			<input type="text" name=<%=value[1]%> value=<%=value[1]%> />
+		<td align="left"" class="txtstyle4">
+			<input type="text" name="name" value=<%=value[1]%> />
 		</td>
 	</tr>
 	
@@ -71,32 +71,130 @@ String radio_value = request.getParameter("basalPID");
 			<b>Basal Rate</b>
 		</td>
 	</tr>
-	
-	<%
-		
-		for (int j = 2; j < 26; j++) {
-		
-	%>
 	<tr>
+		<td align="center" class="txtstyle4">00:00</td>
 		<td align="center" class="txtstyle4">
-			<% if(j-2 < 10){%>
-			 0<%=j -2 %>:00<%
-			}else{
-				%><%=j -2 %>:00<%
-			}%>
-		</td>
-		
+			<input type="text" name="r0" value=<%=value[2]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">01:00</td>
 		<td align="center" class="txtstyle4">
-			<input type="text" name=<%=value[j]%> value=<%=value[j]%> />
-		</td>
+			<input type="text" name="r1" value=<%=value[3]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">02:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r2" value=<%=value[4]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">03:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r3" value=<%=value[5]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">04:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r4" value=<%=value[6]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">05:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r5" value=<%=value[7]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">06:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r6" value=<%=value[8]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">07:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r7" value=<%=value[9]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">08:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r8" value=<%=value[10]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">09:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r9" value=<%=value[11]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">10:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r10" value=<%=value[12]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">11:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r11" value=<%=value[13]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">12:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r12" value=<%=value[14]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">13:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r13" value=<%=value[15]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">14:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r14" value=<%=value[16]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">15:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r15" value=<%=value[17]%> /></td>
+	</tr>
+
+	<tr>
+		<td align="center" class="txtstyle4">16:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r16" value=<%=value[18]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">17:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r17" value=<%=value[19]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">18:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r18" value=<%=value[22]%> /></td>
+	</tr>
+	<tr>
+	
+		<td align="center" class="txtstyle4">19:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r19" value=<%=value[21]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">20:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r20" value=<%=value[22]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">21:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r21" value=<%=value[23]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">22:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r22" value=<%=value[24]%> /></td>
+	</tr>
+	<tr>
+		<td align="center" class="txtstyle4">23:00</td>
+		<td align="center" class="txtstyle4">
+			<input type="text" name="r23" value=<%=value[25]%> /></td>
 	</tr>
 	
-	<%session.setAttribute( "myArray", value ); %>
-	
-	
-	<%
-		}
-	%>
+
 	
 	<%
 		}

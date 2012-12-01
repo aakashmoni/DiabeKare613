@@ -512,7 +512,7 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	*
 	*
 	*/
-	public boolean UpdateBasalProfile(String id, String name, String r1, String r2, String r3, String r4, String r5, String r6, String r7, String r8, String r9, String r10, String r11, String r12, String r13, String r14, String r15, String r16, String r17, String r18, String r19, String r20, String r21, String r22, String r23, String r24 ) {
+	public boolean UpdateBasalProfile(String id, String name, String r0,String r1, String r2, String r3, String r4, String r5, String r6, String r7, String r8, String r9, String r10, String r11, String r12, String r13, String r14, String r15, String r16, String r17, String r18, String r19, String r20, String r21, String r22, String r23 ) {
 		
 		boolean flag = false;
 
@@ -520,8 +520,8 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 		
 			Connection connection = dbConnection();
 			Statement statement = connection.createStatement();			
-			statement.executeUpdate("UPDATE basal_profile1 SET name='"+name+"',rate0= '"+r1+"',rate1='"+r2+"',rate2='"+r3+"',rate3='"+r4+"',rate4='"+r5+"',rate5='"+r6+"',rate6='"+r7+"',rate7='"+r8+"',rate8='"+r9+"',rate9='"+r10+"',rate10='"+r11+"',rate11='"+r12+"',rate12='"+r13+"',rate13='"+r14+"',rate14='"+r15+"',rate15='"+r16+"',rate16='"+r17+"',rate17='"+r18+"',rate18='"+r19+"',rate19='"+r20+"',rate20='"+r21+"',rate21='"+r22+"',rate22='"+r23+"',rate23='"+r24+"' WHERE profile_id="+id);
-			 log.debug("DiabeKareBean.UPDATE basal profile1 ====SET name='"+name+"',rate0= '"+r1+"',rate1='"+r2+"',rate2='"+r3+"',rate3='"+r4+"',rate4='"+r5+"',rate5='"+r6+"',rate6='"+r7+"',rate7='"+r8+"',rate8='"+r9+"',rate9='"+r10+"',rate10='"+r11+"',rate11='"+r12+"',rate12='"+r13+"',rate13='"+r14+"',rate14='"+r15+"',rate15='"+r16+"',rate16='"+r17+"',rate17='"+r18+"',rate18='"+r19+"',rate19='"+r20+"',rate20='"+r21+"',rate21='"+r22+"',rate22='"+r23+"',rate23='"+r24+"' WHERE profile_id="+id);
+			statement.executeUpdate("UPDATE basal_profile1 SET name='"+name+"',rate0= '"+r0+"',rate1='"+r1+"',rate2='"+r2+"',rate3='"+r3+"',rate4='"+r4+"',rate5='"+r5+"',rate6='"+r6+"',rate7='"+r7+"',rate8='"+r8+"',rate9='"+r9+"',rate10='"+r10+"',rate11='"+r11+"',rate12='"+r12+"',rate13='"+r13+"',rate14='"+r14+"',rate15='"+r15+"',rate16='"+r16+"',rate17='"+r17+"',rate18='"+r18+"',rate19='"+r19+"',rate20='"+r20+"',rate21='"+r21+"',rate22='"+r22+"',rate23='"+r23+"' WHERE profile_id="+id+"");
+			 log.debug("DiabeKareBean.UPDATE basal_profile1 SET name='"+name+"',rate0= '"+r0+"',rate1='"+r1+"',rate2='"+r2+"',rate3='"+r3+"',rate4='"+r4+"',rate5='"+r5+"',rate6='"+r6+"',rate7='"+r7+"',rate8='"+r8+"',rate9='"+r9+"',rate10='"+r10+"',rate11='"+r11+"',rate12='"+r12+"',rate13='"+r13+"',rate14='"+r14+"',rate15='"+r15+"',rate16='"+r16+"',rate17='"+r17+"',rate18='"+r18+"',rate19='"+r19+"',rate20='"+r20+"',rate21='"+r21+"',rate22='"+r22+"',rate23='"+r23+"' WHERE profile_id="+id);
 			flag = true;
 		} catch (Exception e) {
 			System.out.println(e);

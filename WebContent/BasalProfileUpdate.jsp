@@ -1,60 +1,65 @@
 <jsp:useBean id="dkbean" class="com.umd.app.diabekare.DiabeKareBean"/>
 <%
-String[]value = (String[])session.getAttribute( "myArray" );
-
-String id=value[0];
+String id=request.getParameter("id");
 out.println(id);
-String name=value[1];
+String name=request.getParameter("name");
 out.println(name);
-String r1=value[2];
+String r0=request.getParameter("r0");
+out.println(r0);
+String r1=request.getParameter("r1");
 out.println(r1);
-String r2=value[3];
+String r2=request.getParameter("r2");
 out.println(r2);
-String r3=value[4];
+String r3=request.getParameter("r3");
 out.println(r3);
-String r4=value[5];
+String r4=request.getParameter("r4");
 out.println(r4);
-String r5=value[6];
+String r5=request.getParameter("r5");
 out.println(r5);
-String r6=value[7];
+String r6=request.getParameter("r6");
 out.println(r6);
-String r7=value[8];
+String r7=request.getParameter("r7");
 out.println(r7);
-String r8=value[9];
+String r8=request.getParameter("r8");
 out.println(r8);
-String r9=value[10];
+String r9=request.getParameter("r9");
 out.println(r9);
-String r10=value[11];
+String r10=request.getParameter("r10");
 out.println(r10);
-String r11=value[12];
+String r11=request.getParameter("r11");
 out.println(r11);
-String r12=value[13];
+String r12=request.getParameter("r12");
 out.println(r12);
-String r13=value[14];
+String r13=request.getParameter("r13");
 out.println(r13);
-String r14=value[15];
+String r14=request.getParameter("r14");
 out.println(r14);
-String r15=value[16];
+String r15=request.getParameter("r15");
 out.println(r15);
-String r16=value[17];
+String r16=request.getParameter("r16");
 out.println(r16);
-String r17=value[18];
+String r17=request.getParameter("r17");
 out.println(r17);
-String r18=value[19];
+String r18=request.getParameter("r18");
 out.println(r18);
-String r19=value[20];
+String r19=request.getParameter("r19");
 out.println(r19);
-String r20=value[21];
+String r20=request.getParameter("r20");
 out.println(r20);
-String r21=value[22];
+String r21=request.getParameter("r21");
 out.println(r21);
-String r22=value[23];
+String r22=request.getParameter("r22");
 out.println(r22);
-String r23=value[24]; 
+String r23=request.getParameter("r23");
 out.println(r23);
-String r24=value[25];
-out.println(r24);
 
-boolean flag = dkbean.UpdateBasalProfile(id, name,  r1,  r2,  r3,  r4,  r5,  r6,  r7,  r8,  r9,  r10,  r11,  r12,  r13,  r14,  r15,  r16,  r17,  r18,  r19,  r20,  r21,  r22,  r23,  r24 );
-out.println(flag);
+boolean flag = dkbean.UpdateBasalProfile( id, name, r0, r1,  r2,  r3,  r4,  r5,  r6,  r7,  r8,  r9,  r10,  r11,  r12,  r13,  r14,  r15,  r16,  r17,  r18,  r19,  r20,  r21,  r22,  r23);
+out.println(flag); 
+
+if (flag){
+	response.sendRedirect("Success.jsp");
+}
+else{
+	response.sendRedirect("Failure.jsp");
+}
 %>

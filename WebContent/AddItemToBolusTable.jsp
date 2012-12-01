@@ -13,7 +13,24 @@
 <script language="javascript">
 function ff()
 {
-
+	var i = parseInt(document.f2.Carbohydrates.value);
+	if(isNaN(i))
+	{
+		alert("enter an interger value for carbohydrates");
+		return false;
+	}
+	if(i<= 0)
+	{
+		alert("Value entered is Zero or Negative. Please enter a Positive integer value for Carbohydrates");
+		return false;
+	}
+	if(i>=1000)
+	{
+		alert("Warning: Insulin value might exceed Max Insulin Limit");
+		return true;	
+		
+	}
+	
 if(document.f2.Food Item.value=="")
 {
 	alert("enter valid Food Item name");
@@ -21,7 +38,7 @@ if(document.f2.Food Item.value=="")
 }
 if(document.f2.Carbohydrates.value=="")
 {
-	alert("enter valid amount of Carbohydrates");
+	alert("enter a positive integer value for Carbohydrates");
 	return false;
 }
 
@@ -54,7 +71,7 @@ else
 	
 	<tr>
 		
-		<td><input type="submit" name="submit" value="Add"></td>
+		<td><input type="submit" name="submit" value="Submit"></td>
 	</tr>
 </table>
 </form>

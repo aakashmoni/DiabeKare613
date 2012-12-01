@@ -11,12 +11,38 @@
 </head>
 
 <body>
+<script language="javascript">
+
+function ff()
+{	
+	var i = parseInt(document.f1.Carbohydrates.value);
+
+if(isNaN(i))
+{
+	alert("enter an interger value for carbohydrates");
+	return false;
+}
+if(i<= 0)
+{
+	alert("Value entered is Zero or Negative. Please enter a Positive integer value for Carbohydrates");
+	return false;
+}
+
+
+else
+	return true;
+}
+</script>
+
+
+
+
 <div id="container">
 <div id="innerpage_content">
 <div class="leftbox">
 <h1>Bolus</h1>
 
-<form action="Bolus_Process_Textbox.jsp" method="get">
+<form action="Bolus_Process_Textbox.jsp" name="f2" method="get" onSubmit="return ff()">
 <table border="0">
 <tr>
 		<td>Carbohydrates:</td>
@@ -35,7 +61,7 @@
 	
 	
 
-<form action="Bolus_Process.jsp" method="get">
+<form action="Bolus_Process.jsp" name="f2" method="get" onSubmit="return ff()">
 
 <table border="0">
 

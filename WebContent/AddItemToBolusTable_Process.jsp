@@ -3,8 +3,8 @@
 
 String food_item=request.getParameter("Food Item");
 out.println(food_item);
-String carbohydrates=request.getParameter("Carbohydrates");
-out.println(carbohydrates);
-boolean flag = dkbean.insertBolusFoodConversionTable(  food_item,  carbohydrates );
+String Carbohydrates=request.getParameter("Carbohydrates");
+out.println(Carbohydrates);
+boolean flag = dkbean.insertBolusFoodConversionTable(  food_item,  Carbohydrates );
 out.println(flag);
 %>

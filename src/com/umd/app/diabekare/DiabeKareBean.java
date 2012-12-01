@@ -160,7 +160,7 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 		
 			Connection connection = dbConnection();
 			Statement statement = connection.createStatement();
-			
+			log.debug("insertBolusFoodConversionTable");
 			statement.executeUpdate("insert into bolus_food_conversion_table(food_item,carbohydrates) values('"+ food_item+ "','"+ carbohydrates+ "')");
 			flag = true;
 		} catch (Exception e) {
@@ -339,6 +339,7 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	        String a = "";
 	        try {
 	            PreparedStatement pst = con.prepareStatement("select * from bolus_food_conversion_table WHERE item_id='"+fooditem_id+"'");
+	            log.debug("DiabeKareBean.submitBolus==========select * from bolus_food_conversion_table WHERE item_id='"+fooditem_id+"'");
 	            rs = pst.executeQuery();
 	            while (rs.next()) {
 	                String value[] = new String[3];
@@ -593,6 +594,309 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 		}
 		return flag;
 	}
+	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-30-2012
+	 * @function Make Clock Fail
+	 * @purpose Make Clock Fail
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public boolean makeClockFail ()
+	{
+		Connection con = dbConnection();
+		   Boolean flag = false;
+		
+		   try {
+		            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET clock_status= 0");
+		            log.debug("DiabeKareBean.update current_state ==========UPDATE current_state SET clock_status= 0 Clock Fail");
+		            rs1 = pr.executeUpdate();
+		            
+
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        return flag;
+		}
+	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-30-2012
+	 * @function Make Clock Pass
+	 * @purpose Make Clock Pass
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public boolean makeClockPass ()
+	{
+		Connection con = dbConnection();
+		   Boolean flag = false;
+		
+		   try {
+		            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET clock_status= 1");
+		            log.debug("DiabeKareBean.update current_state ==========UPDATE current_state SET clock_status= 1 Clock Pass");
+		            rs1 = pr.executeUpdate();
+		            
+
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        return flag;
+		}
+	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-30-2012
+	 * @function Get Clock Status
+	 * @purpose Get Clock Status
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public int clockstatus ()
+	{
+		Connection con = dbConnection();
+		   Boolean flag = false;
+		   int clock_state = 0;
+		
+		   try {
+		            PreparedStatement pr = con.prepareStatement("SELECT clock_status FROM current_state LIMIT 1");
+		            log.debug("DiabeKareBean Get clock state");
+		           
+		            clock_state = pr.executeUpdate();
+		            		            
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        return clock_state;
+		}
+	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-30-2012
+	 * @function Make ECU Fail
+	 * @purpose Make ECU Fail
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public boolean makeECUFail ()
+	{
+		Connection con = dbConnection();
+		   Boolean flag = false;
+		
+		   try {
+		            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET ecu_status= 0");
+		            log.debug("DiabeKareBean.update current_state ==========UPDATE current_state SET ecu_status= 0 Clock Fail");
+		            rs1 = pr.executeUpdate();
+		            
+
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        return flag;
+		}
+	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-30-2012
+	 * @function Make ECU pass
+	 * @purpose Make ECU pass
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public boolean makeECUPass ()
+	{
+		Connection con = dbConnection();
+		   Boolean flag = false;
+		
+		   try {
+		            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET ecu_status= 1");
+		            log.debug("DiabeKareBean.update current_state ==========UPDATE current_state SET ecu_status= 1 ECU Pass");
+		            rs1 = pr.executeUpdate();
+		            
+
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        return flag;
+		}
+	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-30-2012
+	 * @function Get ECU Status
+	 * @purpose Get ECU Status
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public int ecustatus ()
+	{
+		Connection con = dbConnection();
+		   Boolean flag = false;
+		   int ecu_state = 0;
+		
+		   try {
+		            PreparedStatement pr = con.prepareStatement("SELECT ecu_status FROM current_state LIMIT 1");
+		            log.debug("DiabeKareBean Get ECU state");
+		           
+		            ecu_state = pr.executeUpdate();
+		            		            
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        return ecu_state;
+		}
+	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-30-2012
+	 * @function Make Hardware Fail
+	 * @purpose Make Hardware Fail
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public boolean makeHardwareFail ()
+	{
+		Connection con = dbConnection();
+		   Boolean flag = false;
+		
+		   try {
+		            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET hardware_status= 0");
+		            log.debug("DiabeKareBean.update current_state ==========UPDATE current_state SET hardware_status= 0 Hardware Fail");
+		            rs1 = pr.executeUpdate();
+		            
+
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        return flag;
+		}
+	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-30-2012
+	 * @function Make Hardware Pass
+	 * @purpose Make Hardware Pass
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public boolean makeHardwarePass ()
+	{
+		Connection con = dbConnection();
+		   Boolean flag = false;
+		
+		   try {
+		            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET hardware_status= 1");
+		            log.debug("DiabeKareBean.update current_state ==========UPDATE current_state SET hardware_status= 1 Hardware Pass");
+		            rs1 = pr.executeUpdate();
+		            
+
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        return flag;
+		}
+	
+	/**
+	 *	
+	 * @author Arun 
+	 * @date  11-30-2012
+	 * @function Get ECU Status
+	 * @purpose Get ECU Status
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public int hardwarestatus ()
+	{
+		Connection con = dbConnection();
+		   Boolean flag = false;
+		   int hardware_state = 0;
+		
+		   try {
+		            PreparedStatement pr = con.prepareStatement("SELECT hardware_status FROM current_state LIMIT 1");
+		            log.debug("DiabeKareBean Get hardware state");
+		           
+		            hardware_state = pr.executeUpdate();
+		            		            
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        return hardware_state;
+		}
+		
+	
+	
 }
 
 

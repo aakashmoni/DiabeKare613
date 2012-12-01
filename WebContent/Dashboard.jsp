@@ -5,7 +5,30 @@
 <title>DiabeKare</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<script>
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+
 <script language="javascript">
     function val()
     {
@@ -24,13 +47,17 @@
       return true;
     }
 </script>
+
+<body onload="startTime()">
 <div id="container"> 
 	<div id="header">
     	<div id="logo"><a href="#"><img src="images/logo.png" width="330" height="120"  border="0"/></a></div>
         <div id="navigation">
         	<div id="top">
             
-            <div id="top_right"> <div style="float:left; width:165px;"><div class="meter-wrap">
+            <div id="top_right">
+            <div id="txt"></div>
+             <div style="float:left; width:165px;"><div class="meter-wrap">
     <div class="meter-value" style="background-color: #0a0; width: 50%;">
         <div class="meter-text">
             Insulin

@@ -1,5 +1,8 @@
 package com.umd.app.diabekare;
 
+import com.umd.app.diabekare.Controller;
+import com.umd.app.diabekare.InsulinReservoir;
+
 import java.util.*;
 import java.io.*;
 import java.lang.*;

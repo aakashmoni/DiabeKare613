@@ -34,6 +34,17 @@ public class Battery
   }
   
   /**
+   * returns the life of the battery
+   * 
+   *
+   *  
+   */
+  public int batteryLife()
+  {
+    
+    return life;
+  }
+  /**
    * Determines whether this battery is dead.
    * @return
    *    true if the battery is still alive, false

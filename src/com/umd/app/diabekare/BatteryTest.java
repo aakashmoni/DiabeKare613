@@ -15,7 +15,8 @@ public class BatteryTest
     // Use it for 5 minutes, should still be alive
     b.use(5);
     System.out.println("should be alive: " + b.isAlive());
-    
+    int remaining =  b.batteryLife();
+    System.out.println(remaining);
     // Use it for 20 minutes, should be dead now
     b.use(20);
     System.out.println("should be dead: " + b.isAlive());
@@ -26,8 +27,9 @@ public class BatteryTest
     
     // Use it for 9 minutes, should still be alive
     b.use(9);
+   
     System.out.println("should be alive: " + b.isAlive());
-
+    
     // Use it for one minute more, should now be dead
     b.use(1);
     System.out.println("should be dead: " + b.isAlive());

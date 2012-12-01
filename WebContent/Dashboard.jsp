@@ -50,7 +50,9 @@
     font-size: 20px;
     margin-right: 1px;
     margin-top: 25px;
-    width: 210px; font-weight:bold;"><a href="logout.jsp"><p style="color: #FBF8EF">Logout</p></a></div>
+    width: 210px; font-weight:bold;"><a href="logout.jsp"><p style="color: #FBF8EF">Logout</p></a>
+    <font>Welcome</font> <%= session.getAttribute("username") %>
+    </div>
            
                 
 

@@ -12,8 +12,9 @@
         session.setAttribute("name",username);
         if(flag == true)
         {
-            response.sendRedirect("Dashboard.jsp");
+        	session.setAttribute("username",username);
            	log.debug("login.jsp----"+username+ " successfully Logged in");
+           	response.sendRedirect("Dashboard.jsp");
         }        
         else
           {

@@ -529,7 +529,70 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 		return flag;
 	}
 
+	/**
+	*
+	* @author Kunvar
+	* @date  11-17-2012
+	* @function dBConnection
+	* @purpose Database Connection
+	* @return Connection object
+	* @exception SQL Exception & Class Not Found Exception
+	* @version 1.0
+	*
+	*
+	*
+	*
+	*/
+	public ArrayList getUserDetails() {
+        Connection con = dbConnection();
+        ArrayList al = new ArrayList();
+        try {
+            PreparedStatement pst = con.prepareStatement("select * from user_details WHERE user_id=1");
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                String value[] = new String[7];
+                for(int i = 0; i<7;i++){
+                	value[i] = rs.getString(i+1);        
+                }
+                al.add(value);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return al;
+    }
 	
+	/**
+	*
+	* @author Kunvar
+	* @date  11-17-2012
+	* @function dBConnection
+	* @purpose Database Connection
+	* @return Connection object
+	* @exception SQL Exception & Class Not Found Exception
+	* @version 1.0
+	*
+	*
+	*
+	*
+	*/
+	public boolean UpdateUserDetails(String id, String fn, String ln,String un, String pwd, String age, String sex) {
+		
+		boolean flag = false;
+
+		try {
+		
+			Connection connection = dbConnection();
+			Statement statement = connection.createStatement();			
+			statement.executeUpdate("UPDATE user_details SET first_name='"+fn+"',last_name= '"+ln+"',username='"+un+"',password='"+pwd+"',age='"+age+"',sex='"+sex+"'");
+			 log.debug("DiabeKareBean.UPDATE user_details SET first_name='"+fn+"',last_name= '"+ln+"',username='"+un+"',password='"+pwd+"',age='"+age+"',sex='"+sex+"'");
+			flag = true;
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return flag;
+	}
 }
 
 

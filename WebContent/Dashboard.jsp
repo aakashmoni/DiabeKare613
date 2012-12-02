@@ -125,33 +125,85 @@ return i;
                 </ul>     
                 <table>
                 <tr>
-               	<td align="center" class="txtstyle4"><input type="submit"
-			name="submit" value="Self Test" onclick="form.action='self_test.jsp'"></td>
-				</tr>
-                <tr>	
-                <td align="center" class="txtstyle4"><input type="submit"
-			name="submit" value="Clock Fail" onclick="form.action='clock_fail.jsp'"></td>
-			 <td align="center" class="txtstyle4"><input type="submit"
-			name="submit" value="Clock Fix" onclick="form.action='clock_fix.jsp'"></td>
-			 <td align="center" class="txtstyle4"><input type="submit"
-			name="submit" value="Clock Test" onclick="form.action='clock_test.jsp'"></td>
-			</tr>
+		<td>
+		<form><input type="button" id="idname"
+			value="Soft Reset"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/index.html';" />
+		</form>
+		</td>
+		<td>
+		<form><input type="button" id="idname"
+			value="Hard Reset"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/shutdown.jsp';" />
+		</form>
+		</td>
+	</tr>
+	<tr></tr>
+	<tr>
+		<td>
+		<form><input type="button" id="idname" value="Clock Fail"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/ClockFail.jsp';" />
+		</form>
+		</td>
+		<td>
+		<form><input type="button" id="idname" value="Clock Pass"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/ClockPass.jsp';" />
+		</form>
+		</td>
+		<td>
+		<form><input type="button" id="idname" value="Clock Test"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/ClockTest.jsp';" />
+		</form>
+		</td>
+	</tr>
+	<tr></tr>
+	<tr>
+		<td>
+		<form><input type="button" id="idname" value="ECU Fail"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/ECUFail.jsp';" />
+		</form>
+		</td>
+		<td>
+		<form><input type="button" id="idname" value="ECU Pass"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/ECUPass.jsp';" />
+		</form>
+		</td>
+		<td>
+		<form><input type="button" id="idname" value="ECU Test"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/ECUTest.jsp';" />
+		</form>
+		</td>
+	</tr>
+	<tr></tr>
 			<tr>
-			   <td align="center" class="txtstyle4"><input type="submit"
-			name="submit" value="ECU Fail" onclick="form.action='ecu_fail.jsp'"></td>
-			 <td align="center" class="txtstyle4"><input type="submit"
-			name="submit" value="ECU Fix" onclick="form.action='ecu_fix.jsp'"></td>
-			 <td align="center" class="txtstyle4"><input type="submit"
-			name="submit" value="ECU Test" onclick="form.action='ecu_test.jsp'"></td>
-			</tr>
-			<tr>
-			   <td align="center" class="txtstyle4"><input type="submit"
-			name="submit" value="H/W Fail" onclick="form.action='hardware_fail.jsp'"></td>
-			 <td align="center" class="txtstyle4"><input type="submit"
-			name="submit" value="H/W Fix" onclick="form.action='hardware_fix.jsp'"></td>
-			 <td align="center" class="txtstyle4"><input type="submit"
-			name="submit" value="H/W Test" onclick="form.action='hardware_test.jsp'"></td>
-			</tr>
+		<td>
+		<form><input type="button" id="idname" value="H/W Fail"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/HardwareFail.jsp';" />
+		</form>
+		</td>
+		<td>
+		<form><input type="button" id="idname" value="H/W Pass"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/HardwarePass.jsp';" />
+		</form>
+		</td>
+		<td>
+		<form><input type="button" id="idname" value="H/W Test"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/HardwareTest.jsp';" />
+		</form>
+		</td>
+	</tr>
+	
 			</table>
 			
         </div>

@@ -1,6 +1,6 @@
 package com.umd.app.diabekare;
 
-import insulin.InsulinReservoir;
+import com.umd.app.diabekare.InsulinReservoir;
 
 public class Controller
 {

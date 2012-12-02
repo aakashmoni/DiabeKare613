@@ -1,7 +1,7 @@
 <jsp:useBean id="dkbean" class="com.umd.app.diabekare.DiabeKareBean"/>
-final Logger log = Logger.getLogger("DiabeKarelogger");
+ <%@ page import="org.apache.log4j.Logger" %>
 <%
-
+Logger log = Logger.getLogger("DiabeKarelogger");
 String carbs_str = request.getParameter("Carbohydrates");
 int carbs = Integer.parseInt( carbs_str );
 

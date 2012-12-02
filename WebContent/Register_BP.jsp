@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ include file="DiabeKareHeader.html" %>
+<%@ include file="DiabeKareHeader.jsp" %>
 <html>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <head>

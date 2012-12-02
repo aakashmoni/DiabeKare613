@@ -894,6 +894,73 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 
 		        return hardware_state;
 		}
+	
+	/**
+	 *	
+	 * @author Aakash Moni 
+	 * @date  12-01-2012
+	 * @function getCurrentBatteryStatus
+	 * @purpose Get Curent Battery status
+	 * @return int
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public int getCurrentBatteryStatus ()
+	{
+		Connection con = dbConnection();		   
+		   int current_battery = 0;
+		
+		   try {
+		            PreparedStatement pst = con.prepareStatement("SELECT current_battery FROM current_state LIMIT 1");     
+		           
+		            rs = pst.executeQuery();
+		            while (rs.next()) {		                
+		                	current_battery = rs.getInt(1);   	                
+		            }
+		            log.debug("DiabeKareBean getCurrentBatteryStatus: "+current_battery);
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        return current_battery;
+		}
+	/**
+	 *	
+	 * @author Aakash Moni 
+	 * @date  12-01-2012
+	 * @function setCurrentBatteryStatus
+	 * @purpose set current Battery status
+	 * @return void
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public void setCurrentBatteryStatus (int battery_status)
+	{
+		Connection con = dbConnection();
+		   
+		
+		   try {
+		            PreparedStatement pr = con.prepareStatement("update  current_state set current_battery = '"+battery_status+"'");     
+		           
+		            pr.executeUpdate();
+		            log.debug("DiabeKareBean setCurrentBatteryStatus: "+battery_status);
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        
+		}
+	
 		
 	
 	

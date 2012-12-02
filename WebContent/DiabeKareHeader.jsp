@@ -1,11 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.sql.*,java.util.*" %>
+<%@ page import="org.apache.log4j.Logger" %>
+<jsp:useBean id="dkbean" class="com.umd.app.diabekare.DiabeKareBean"/>
+<jsp:setProperty name="dkbean" property="*"/>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>DiabeKare</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-
+<%
+int battery = dkbean.getCurrentBatteryStatus();
+%>
 <script>
 function startTime()
 {
@@ -33,7 +40,7 @@ return i;
 
 <div id="container"> 
 	<div id="header">
-    	<div id="logo"><a href="#"><img src="images/newlogo.gif" width="376" height="120"  border="0"/></a></div>
+    	<div id="logo"><a href="#"><img src="images/logo.png" width="376" height="120"  border="0"/></a></div>
         <div id="navigation">
         	<div id="top">
             
@@ -47,7 +54,13 @@ return i;
     </div>
 </div></div>
               <div style="float:left; width:132px;"><div class="battery-wrap">
-    <div class="battery-value" style="background-color: #0a0; width: 80%;">
+    <%
+    if(battery < 20){
+    %>
+    	<div class="battery-value" style="background-color: #a90000; width: <%=battery%>%;">
+    <%}else{ %>
+    	<div class="battery-value" style="background-color: #0a0; width: <%=battery%>%;">
+    <%} %>
         <div class="battery-text">
             Battery
         </div>

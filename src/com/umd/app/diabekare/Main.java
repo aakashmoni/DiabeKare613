@@ -21,9 +21,7 @@ public class Main {
 		toolkit = Toolkit.getDefaultToolkit();
 		timer = new Timer();
 		log =  Logger.getLogger("DiabeKarelogger");  
-		log.debug("current battery from constructor"+current_battery);
-		//stop timer
-		
+		log.debug("current battery from constructor "+current_battery);		
         timer.scheduleAtFixedRate(new batteryProcess(), 0, 5000);
         
 	}
@@ -39,24 +37,24 @@ public class Main {
 		    	int new_current_battery = battery.batteryLife();
 		        dkBean.setCurrentBatteryStatus(new_current_battery);
 		        toolkit.beep();
-		        System.out.println("I'm alive.new current.."+dkBean.getCurrentBatteryStatus());
+		        System.out.println("I'm alive.new current battery.."+dkBean.getCurrentBatteryStatus());
 		        if(new_current_battery == 0){
-					System.out.println("current battery 0.."+dkBean.getCurrentBatteryStatus());			    	
-					timer.cancel();
+					System.out.println("current battery is 0");			    	
+					//timer.cancel();
+					System.exit(0);
 					System.out.println("I'm dead!! Please recharge me");
 			    }
 		        
 		            
 		            
 		    	}
-	    }
-				
+	    }			
 	    
-	            public static void main(String args[]) {
+	            /*public static void main(String args[]) {
 	                new Main();
 	                System.out.format("Task scheduled.%n");
 	            
-	        }
+	        }*/
 	    }
 
 		

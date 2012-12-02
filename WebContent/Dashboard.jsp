@@ -7,6 +7,9 @@
 <title>DiabeKare</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
+<%
+int battery = dkbean.getCurrentBatteryStatus();
+%>
 <script>
 function startTime()
 {
@@ -67,7 +70,13 @@ return i;
     </div>
 </div></div>
               <div style="float:left; width:132px;"><div class="battery-wrap">
-    <div class="battery-value" style="background-color: #0a0; width: 80%;">
+   <%
+    if(battery < 20){
+    %>
+    	<div class="battery-value" style="background-color: #a90000; width: <%=battery%>%;">
+    <%}else{ %>
+    	<div class="battery-value" style="background-color: #0a0; width: <%=battery%>%;">
+    <%} %>
         <div class="battery-text">
             Battery
         </div>

@@ -246,6 +246,44 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	
 	/**
 	 *	
+	 * @author Girish 
+	 * @date  11-25-2012
+	 * @function restoreCurrentBasalProfile
+	 * @purpose After Soft-Reset, next time the user logs-in, basal profile is restored..
+	 * @return null
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public ArrayList getCurrentState() {
+		//public ArrayList restoreCurrentBasalProfile() {
+        Connection con = dbConnection();
+        ArrayList all = new ArrayList();
+        try {
+            PreparedStatement pst = con.prepareStatement("select * from current_state");
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                String value[] = new String[5];
+                value[0] = rs.getString(1);//current_state id
+                value[1] = rs.getString(2);//current_battery
+                value[2] = rs.getString(3);//current_insulin
+                value[3] = rs.getString(4);//current_basal_profile
+                
+                all.add(value);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return all;
+    }
+	
+	/**
+	 *	
 	 * @author Arun 
 	 * @date  11-27-2012
 	 * @function insertintoFoodConversionDatabase

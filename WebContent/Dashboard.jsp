@@ -1,3 +1,5 @@
+<jsp:useBean id="dkbean" class="com.umd.app.diabekare.DiabeKareBean" />
+<%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -122,8 +124,23 @@ return i;
         <div class="features">
         	<ul>
                           
-                </ul>     
-                <table>
+                </ul>
+	<%
+		ArrayList CurrentState = dkbean.getCurrentState();
+		for (int i = 0; i < CurrentState.size(); i++) {
+			String[] value = (String[]) CurrentState.get(i);
+	%>
+	<tr>
+		
+
+		<td align="center" class="txtstyle4"><%=value[1]%></td>
+
+	</tr>
+	<%
+		}
+	%>
+	
+<table>
                 <tr>
 		<td>
 		<form><input type="button" id="idname"
@@ -221,7 +238,7 @@ return i;
     </div>
 <div class="clearfix"></div>
 </div>
-
-<%@ include file="DiabeKareFooter.html" %>
+<!--<meta HTTP-EQUIV="REFRESH" content="0; url=http://localhost:8080/DiabeKare613/SelfTest.jsp">
+--><%@ include file="DiabeKareFooter.html" %>
 </body>
 </html>

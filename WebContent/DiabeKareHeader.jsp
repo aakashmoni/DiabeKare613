@@ -12,6 +12,7 @@
 </head>
 <%
 int battery = dkbean.getCurrentBatteryStatus();
+response.setIntHeader("Refresh", 5);
 %>
 <script>
 function startTime()

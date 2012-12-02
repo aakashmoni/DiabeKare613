@@ -12,6 +12,7 @@
 </head>
 <%
 int battery = dkbean.getCurrentBatteryStatus();
+response.setIntHeader("Refresh", 5);
 %>
 <script language="javascript">
     function val()
@@ -55,6 +56,8 @@ if (i<10)
 return i;
 }
 </script>
+
+
 <body onload="startTime()">
 
 <div id="container"> 

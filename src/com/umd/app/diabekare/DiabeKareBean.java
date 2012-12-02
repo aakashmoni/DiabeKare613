@@ -999,6 +999,72 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 		        
 		}
 	
+	/**
+	 *	
+	 * @author Aakash Moni 
+	 * @date  12-01-2012
+	 * @function getCurrentBatteryStatus
+	 * @purpose Get Curent Battery status
+	 * @return int
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public int getCurrentInsulinLevel()
+	{
+		Connection con = dbConnection();		   
+		   int current_insulin = 0;
+		
+		   try {
+		            PreparedStatement pst = con.prepareStatement("SELECT current_insulin FROM current_state LIMIT 1");     
+		           
+		            rs = pst.executeQuery();
+		            while (rs.next()) {		                
+		            	current_insulin = rs.getInt(1);   	                
+		            }
+		            log.debug("DiabeKareBean getCurrentBatteryStatus: "+current_insulin);
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        return current_insulin;
+		}
+	/**
+	 *	
+	 * @author Aakash Moni 
+	 * @date  12-01-2012
+	 * @function setCurrentBatteryStatus
+	 * @purpose set current Battery status
+	 * @return void
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public void setCurrentInsulinLevel(int insulin_level)
+	{
+		Connection con = dbConnection();
+		   
+		
+		   try {
+		            PreparedStatement pr = con.prepareStatement("update  current_state set current_battery = '"+insulin_level+"'");     
+		           
+		            pr.executeUpdate();
+		            log.debug("DiabeKareBean setCurrentBatteryStatus: "+insulin_level);
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        
+		}
+	
 		
 	
 	

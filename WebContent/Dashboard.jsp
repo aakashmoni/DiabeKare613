@@ -9,8 +9,9 @@
 </head>
 <%
 int battery = dkbean.getCurrentBatteryStatus();
-response.setIntHeader("Refresh", 5);
+response.setIntHeader("Refresh", 25);
 %>
+
 <script>
 function startTime()
 {
@@ -135,39 +136,9 @@ return i;
         	<ul>
                           
                 </ul>
-	<%
-		ArrayList CurrentState = dkbean.getCurrentState();
-		for (int i = 0; i < CurrentState.size(); i++) {
-			String[] value = (String[]) CurrentState.get(i);
-	%>
-	<tr>
-		
-
-		<td align="center" class="txtstyle4"><%=value[1]%></td>
-
-	</tr>
-	<%
-		}
-	%>
+	
 	
 <table>
-                <tr>
-		<td>
-		<form><input type="button" id="idname"
-			value="Soft Reset"
-			onclick="window.location = 
-'http://localhost:8080/DiabeKare613/index.html';" />
-		</form>
-		</td>
-		<td>
-		<form><input type="button" id="idname"
-			value="Hard Reset"
-			onclick="window.location = 
-'http://localhost:8080/DiabeKare613/shutdown.jsp';" />
-		</form>
-		</td>
-	</tr>
-	<tr></tr>
 	<tr>
 		<td>
 		<form><input type="button" id="idname" value="Clock Fail"
@@ -188,7 +159,6 @@ return i;
 		</form>
 		</td>
 	</tr>
-	<tr></tr>
 	<tr>
 		<td>
 		<form><input type="button" id="idname" value="ECU Fail"
@@ -209,8 +179,7 @@ return i;
 		</form>
 		</td>
 	</tr>
-	<tr></tr>
-			<tr>
+	<tr>
 		<td>
 		<form><input type="button" id="idname" value="H/W Fail"
 			onclick="window.location = 
@@ -230,12 +199,53 @@ return i;
 		</form>
 		</td>
 	</tr>
-	
-			</table>
+	<tr>
+		<td>
+		<form><input type="button" id="idname" value="Soft Reset"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/index.jsp';" />
+		</form>
+		</td>
+		<td>
+		<form><input type="button" id="idname" value="Hard Reset"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/shutdown.jsp';" />
+		</form>
+		</td>
+	</tr>
+	<tr>
+	<td>
+		<form><input type="button" id="idname" value="InsertAB"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/InsertAirBubble.jsp';" />
+		</form>
+		</td>
+		<td>
+		<form><input type="button" id="idname" value="TestAB"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/TestAirBubble.jsp';" />
+		</form>
+		</td>		
+		</tr>
+</table>
 			
         </div>
         <div style="margin-top:10px; float:left;">
-        sidebar
+        <%
+		ArrayList CurrentState = dkbean.getCurrentState();
+		for (int i = 0; i < CurrentState.size(); i++) {
+			String[] value = (String[]) CurrentState.get(i);
+	%>
+	<tr>
+	<td align="center" class="txtstyle4">Selected Basal Profile ID</td>
+	</tr>
+	
+	<tr>			
+		<td align="center" class="txtstyle4"><%=value[3]%></td>
+	</tr>
+	<%
+		}
+	%>
         </div>
         
         <div class="application">

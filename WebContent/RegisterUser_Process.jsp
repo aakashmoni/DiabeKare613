@@ -25,6 +25,6 @@ if(flag == true)
 else
   {
 	log.debug("login.jsp----"+fname+ " failed to register");
-    response.sendRedirect("failure.jsp");
+    response.sendRedirect("Failure.jsp");
   }
 %>

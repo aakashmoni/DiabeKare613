@@ -11,8 +11,8 @@
 <script language="javascript" type="text/javascript">
 alert("Logout Successful")
 </script>
-<A HREF="index.html">
-HOME</A>
+<a href="index.jsp">
+HOME</a>
 
 </body>
 </html>

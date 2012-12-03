@@ -12,7 +12,11 @@
 </head>
 <%
 int battery = dkbean.getCurrentBatteryStatus();
+<<<<<<< HEAD
 response.setIntHeader("Refresh", 25);
+=======
+response.setIntHeader("Refresh", 30);
+>>>>>>> Updates for Register user success page
 %>
 <script language="javascript">
     function val()

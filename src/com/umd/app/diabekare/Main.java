@@ -22,7 +22,7 @@ public class Main {
 		timer = new Timer();
 		log =  Logger.getLogger("DiabeKarelogger");  
 		log.debug("current battery from constructor "+current_battery);		
-        timer.scheduleAtFixedRate(new batteryProcess(), 0, 5000);
+        timer.scheduleAtFixedRate(new batteryProcess(), 0, 10000);
         
 	}
 	
@@ -36,7 +36,9 @@ public class Main {
 		    	battery.use(1);
 		    	int new_current_battery = battery.batteryLife();
 		        dkBean.setCurrentBatteryStatus(new_current_battery);
-		        toolkit.beep();
+		        if(new_current_battery == 20 || new_current_battery == 10 ){
+		        	toolkit.beep();
+		        }
 		        System.out.println("I'm alive.new current battery.."+dkBean.getCurrentBatteryStatus());
 		        if(new_current_battery <= 0){
 					System.out.println("current battery is 0");			    	

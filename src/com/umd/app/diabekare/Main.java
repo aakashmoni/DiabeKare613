@@ -10,19 +10,26 @@ import org.apache.log4j.Logger;
 public class Main {
 	Toolkit toolkit;
 	Timer timer;
-	Logger log;   
+	Logger log; 
+	private Battery battery;
     private DiabeKareBean dkBean = new DiabeKareBean();	  
     int current_battery = dkBean.getCurrentBatteryStatus();
     
-    
+ 
    // System.out.print("I'm alive.new current.."+current_battery);
-    private Battery battery = new Battery(current_battery);
+    
 	public Main() {
+		// checking if the battery life is more than  100, then set it to 100. 
+	    if(current_battery > 100) {
+	    	current_battery = 100;
+	    }	   
+	    // Setting initial battery life
+	    battery  = new Battery(current_battery);
 		toolkit = Toolkit.getDefaultToolkit();
 		timer = new Timer();
 		log =  Logger.getLogger("DiabeKarelogger");  
 		log.debug("current battery from constructor "+current_battery);		
-        timer.scheduleAtFixedRate(new batteryProcess(), 0, 10000);
+        timer.scheduleAtFixedRate(new batteryProcess(), 0, 10000);		//scheduling the timer
         
 	}
 	
@@ -31,7 +38,10 @@ public class Main {
 	    	public void run() {	    		
 		    	battery.use(1);
 		    	int new_current_battery = battery.batteryLife();
-		        dkBean.setCurrentBatteryStatus(new_current_battery);
+		    	System.out.println("new_current_battery "+new_current_battery);	    	
+		    	
+		    		dkBean.setCurrentBatteryStatus(new_current_battery);
+		    	
 		        if(new_current_battery == 20 || new_current_battery == 10 ){
 		        	toolkit.beep();
 		        }
@@ -39,7 +49,7 @@ public class Main {
 		        if(new_current_battery <= 0){
 					System.out.println("current battery is 0");			    	
 					//timer.cancel();
-					System.exit(0);
+					System.exit(0);		//system exit if the battery is dead!
 					System.out.println("I'm dead!! Please recharge me");
 			    }
 		        

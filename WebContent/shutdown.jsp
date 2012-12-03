@@ -6,7 +6,11 @@
 </head>
 <body>
 <script>
-window.setTimeout("window.close()", 100);
+<%
+
+System.exit(0);
+
+%>
 </script>
 </body>
 </html>

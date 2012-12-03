@@ -26,11 +26,7 @@ public class Main {
         
 	}
 	
-	   
-		
-	    
-	    
-	    
+	       
 	    class batteryProcess extends TimerTask {
 	    	public void run() {	    		
 		    	battery.use(1);

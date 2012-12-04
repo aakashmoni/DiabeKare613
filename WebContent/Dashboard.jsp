@@ -7,6 +7,7 @@
 <title>DiabeKare</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
+
 <%
 int battery = dkbean.getCurrentBatteryStatus();
 response.setIntHeader("Refresh", 25);
@@ -61,7 +62,7 @@ return i;
     	<div id="logo"><a href="#"><img src="images/logo.png" width="330" height="120"  border="0"/></a></div>
         <div id="navigation">
         	<div id="top">
-            
+            		
             <div id="top_right">
             <div id="txt"></div>
              <div style="float:left; width:165px;"><div class="meter-wrap">
@@ -75,6 +76,7 @@ return i;
    <%
     if(battery < 20){
     %>
+ 
     	<div class="battery-value" style="background-color: #a90000; width: <%=battery%>%;">
     <%}else{ %>
     	<div class="battery-value" style="background-color: #0a0; width: <%=battery%>%;">
@@ -139,6 +141,18 @@ return i;
 	
 	
 <table>
+	<tr>
+		<td>
+		<button type="button" id="stop">Stop</button>
+		</td>
+		<td>
+		<button type="button" id="pause">Pause</button>
+		</td>
+		<td>
+		<button type="button" id="play">Play</button>
+		</td>
+	</tr>
+
 	<tr>
 		<td>
 		<form><input type="button" id="idname" value="Clock Fail"
@@ -221,12 +235,21 @@ return i;
 		</form>
 		</td>
 		<td>
+		<form><input type="button" id="idname" value="RemoveAB"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/RemoveAirBubble.jsp';" />
+		</form>
+		</td>
+		<td>
 		<form><input type="button" id="idname" value="TestAB"
 			onclick="window.location = 
 'http://localhost:8080/DiabeKare613/TestAirBubble.jsp';" />
 		</form>
 		</td>		
 		</tr>
+
+	
+	
 </table>
 			
         </div>

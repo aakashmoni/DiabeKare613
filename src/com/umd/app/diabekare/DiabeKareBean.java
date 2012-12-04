@@ -106,6 +106,110 @@ public boolean insertCurrentState(String state_id, String current_battery, Strin
 /**
  *	
  * @author Girish 
+ * @date  11-30-2012
+ * @function insertAirBubble
+ * @purpose To simulate the insertion of Air bubble
+ * @return null
+ * @exception SQL Exception & Class Not Found Exception
+ * @version 1.0
+ *
+ *
+ *
+ *
+ */
+
+public boolean insertAirBubble ()
+{
+	Connection con = dbConnection();
+	   Boolean flag = false;
+	
+	   try {
+	            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET air_bubble= '1' WHERE state_id='1' ");
+	            log.debug("DiabeKareBean.update current_state ==========UPDATE current_state SET air_bubble = 1 Air Bubble Present");
+	            rs1 = pr.executeUpdate();
+	            flag = true;
+	        } catch (SQLException sqle) {
+	            System.out.println("SQL Error :" + sqle);
+	        }
+
+	        return flag;
+	}
+
+
+/**
+ *	
+ * @author Girish 
+ * @date  11-30-2012
+ * @function removeAirBubble
+ * @purpose To simulate the removal of Air bubble
+ * @return null
+ * @exception SQL Exception & Class Not Found Exception
+ * @version 1.0
+ *
+ *
+ *
+ *
+ */
+
+public boolean removeAirBubble ()
+{
+	Connection con = dbConnection();
+	   Boolean flag = false;
+	
+	   try {
+	            PreparedStatement pr = con.prepareStatement(" UPDATE current_state SET air_bubble='0' WHERE state_id='1' ");
+	           
+	            log.debug("DiabeKareBean.update current_state ==========UPDATE current_state SET air_bubble = 0 Air Bubble Present");
+	            rs1 = pr.executeUpdate();
+	            flag = true;
+	            
+	        } catch (SQLException sqle) {
+	            System.out.println("SQL Error :" + sqle);
+	        }
+
+	        return flag;
+	}
+
+
+/**
+ *	
+ * @author Girish 
+ * @date  11-30-2012
+ * @function testAirBubble
+ * @purpose To test the presence of Air bubble
+ * @return null
+ * @exception SQL Exception & Class Not Found Exception
+ * @version 1.0
+ *
+ *
+ *
+ *
+ */
+
+public int testAirBubble ()
+{
+	Connection con = dbConnection();
+	   int ab_status = 0;
+	   
+	   try {
+		   PreparedStatement pst = con.prepareStatement("SELECT air_bubble FROM current_state LIMIT 1");     
+           
+           rs = pst.executeQuery();
+           while (rs.next()) {		                
+               	ab_status = rs.getInt(1);   	                
+           }
+           log.debug("DiabeKareBean testAirBubble: "+ab_status);
+                   		            
+	        } catch (SQLException sqle) {
+	            System.out.println("SQL Error :" + sqle);
+	        }
+
+	        return ab_status;
+	}
+
+/**
+ *	
+ * @author Girish 
  * @date  11-25-2012
  * @function insertBasalProfile
  * @purpose inserts a new basal profile
@@ -169,42 +273,6 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 		return flag;
 	}
 	
-	
-	/**
-	   *
-	   * @author Aakash Moni
-	   * @date  11-19-2012
-	   * @function login
-	   * @purpose check username and password exits in DB
-	   * @return null
-	   * @exception SQL Exception & Class Not Found Exception
-	   * @version 1.0
-	   *
-	   *
-	   *
-	   *
-	   */
-	
-	public boolean login(String username, String password)
-	{
-	   Connection con = dbConnection();
-	   Boolean flag = false;
-	   try {
-	            PreparedStatement pr = con.prepareStatement("select * from user_details where username='"+username+"' and password='"+password+"'");
-	            System.out.println("==========select * from user_details where username='"+username+"' and password='"+password+"'");
-	            log.debug("DiabeKareBean.login==========select * from user_details where username='"+username+"' and password='"+password+"'");
-	            rs = pr.executeQuery();
-	            if(rs.next())
-	            {
-	            	flag = true;
-	            }
-
-	        } catch (SQLException sqle) {
-	            System.out.println("SQL Error :" + sqle);
-	        }
-
-	        return flag;
-	}
 	
 	/**
 	 *	
@@ -281,6 +349,42 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 
         return all;
     }
+	/**
+	   *
+	   * @author Aakash Moni
+	   * @date  11-19-2012
+	   * @function login
+	   * @purpose check username and password exits in DB
+	   * @return null
+	   * @exception SQL Exception & Class Not Found Exception
+	   * @version 1.0
+	   *
+	   *
+	   *
+	   *
+	   */
+	
+	public boolean login(String username, String password)
+	{
+	   Connection con = dbConnection();
+	   Boolean flag = false;
+	   try {
+	            PreparedStatement pr = con.prepareStatement("select * from user_details where username='"+username+"' and password='"+password+"'");
+	            System.out.println("==========select * from user_details where username='"+username+"' and password='"+password+"'");
+	            log.debug("DiabeKareBean.login==========select * from user_details where username='"+username+"' and password='"+password+"'");
+	            rs = pr.executeQuery();
+	            if(rs.next())
+	            {
+	            	flag = true;
+	            }
+
+	        } catch (SQLException sqle) {
+	            System.out.println("SQL Error :" + sqle);
+	        }
+
+	        return flag;
+	}
+	
 	
 	/**
 	 *	

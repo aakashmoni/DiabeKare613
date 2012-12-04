@@ -1206,6 +1206,40 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 
 		        
 		}
+	/**
+	 *	
+	 * @author Aakash Moni 
+	 * @date  12-01-2012
+	 * @function getCurrentBatteryStatus
+	 * @purpose Get Curent Battery status
+	 * @return int
+	 * @exception SQL Exception & Class Not Found Exception
+	 * @version 1.0
+	 *
+	 *
+	 *
+	 *
+	 */
+	
+	public float getCurrentBasalRate(String hour)
+	{
+		Connection con = dbConnection(); 		   
+		   float current_basal_rate = 0;
+		
+		   try {
+		            PreparedStatement pst = con.prepareStatement("SELECT rate"+hour+" FROM basal_profile1 a,current_state b WHERE b.current_basal_profile = a.profile_id");     
+		            log.debug("SELECT rate"+hour+" FROM basal_profile1 a,current_state b WHERE b.current_basal_profile = a.profile_id");
+		            rs = pst.executeQuery();
+		            while (rs.next()) {		                
+		            	current_basal_rate = rs.getInt(1);   	                
+		            }
+		            log.debug("DiabeKareBean getCurrentBasalRate: "+current_basal_rate);
+		        } catch (SQLException sqle) {
+		            System.out.println("SQL Error :" + sqle);
+		        }
+
+		        return current_basal_rate;
+		}
 	
 		
 	

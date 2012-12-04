@@ -43,6 +43,7 @@ public class Main {
 		    		dkBean.setCurrentBatteryStatus(new_current_battery);
 		    	
 		        if(new_current_battery == 20 || new_current_battery == 10 ){
+		        	log.debug("ALARM: BATTERY IS LOW "+current_battery);	
 		        	toolkit.beep();
 		        }
 		        System.out.println("I'm alive.new current battery.."+dkBean.getCurrentBatteryStatus());

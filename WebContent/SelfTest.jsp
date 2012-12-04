@@ -5,12 +5,17 @@ int ecu_state = dkbean.ecustatus();
 int hardware_state = dkbean.hardwarestatus();
 if ((clock_state == 0) || (ecu_state == 0) || (hardware_state == 0))
 {
-alert ("Self Test Failed");
-response.sendRedirect("index.html");
+	%><script language="javascript" type="text/javascript">
+	alert("Self Test Failed")
+	</script><%
+
+response.sendRedirect("index.jsp");
 }
-if ((clock_state && ecu_state && hardware_state) == 1)
+if ((clock_state == 1) && (ecu_state ==1) && (hardware_state == 1))
 {
-alert ("Self Test Passed");
+	%><script language="javascript" type="text/javascript">
+	alert("Self Test Passed")
+	</script><%
 response.sendRedirect("Dashboard.jsp");
 }
 %>

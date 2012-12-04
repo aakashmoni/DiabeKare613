@@ -864,9 +864,11 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 		
 		   try {
 		            PreparedStatement pr = con.prepareStatement("SELECT clock_status FROM current_state LIMIT 1");
-		            log.debug("DiabeKareBean Get clock state");
-		           
-		            clock_state = pr.executeUpdate();
+		            rs = pr.executeQuery();
+		            while (rs.next()) {		                
+		            	clock_state = rs.getInt(1);   	                
+		            }
+		            log.debug("DiabeKareBean clockstatus: "+clock_state);
 		            		            
 		        } catch (SQLException sqle) {
 		            System.out.println("SQL Error :" + sqle);
@@ -964,9 +966,11 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 		
 		   try {
 		            PreparedStatement pr = con.prepareStatement("SELECT ecu_status FROM current_state LIMIT 1");
-		            log.debug("DiabeKareBean Get ECU state");
-		           
-		            ecu_state = pr.executeUpdate();
+		            rs = pr.executeQuery();
+		            while (rs.next()) {		                
+		            	ecu_state = rs.getInt(1);   	                
+		            }
+		            log.debug("DiabeKareBean ecustatus: "+ecu_state);
 		            		            
 		        } catch (SQLException sqle) {
 		            System.out.println("SQL Error :" + sqle);
@@ -1064,9 +1068,11 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 		
 		   try {
 		            PreparedStatement pr = con.prepareStatement("SELECT hardware_status FROM current_state LIMIT 1");
-		            log.debug("DiabeKareBean Get hardware state");
-		           
-		            hardware_state = pr.executeUpdate();
+		            rs = pr.executeQuery();
+		            while (rs.next()) {		                
+		            	hardware_state = rs.getInt(1);   	                
+		            }
+		            log.debug("DiabeKareBean hardwarestatus: "+hardware_state);
 		            		            
 		        } catch (SQLException sqle) {
 		            System.out.println("SQL Error :" + sqle);

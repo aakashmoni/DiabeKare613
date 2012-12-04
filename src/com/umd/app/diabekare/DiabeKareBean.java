@@ -207,6 +207,44 @@ public int testAirBubble ()
 	        return ab_status;
 	}
 
+
+
+/**
+ *	
+ * @author Girish 
+ * @date  11-30-2012
+ * @function getCurrentBP
+ * @purpose To get the current basal  profile selected
+ * @return null
+ * @exception SQL Exception & Class Not Found Exception
+ * @version 1.0
+ *
+ *
+ *
+ *
+ */
+
+public int getCurrentBP()
+{
+	Connection con = dbConnection();
+	   int current_bp = 0;
+	   
+	   try {
+		   PreparedStatement pst = con.prepareStatement("SELECT current_basal_profile FROM current_state");     
+           
+           rs = pst.executeQuery();
+           while (rs.next()) {		                
+               	current_bp = rs.getInt(1);   	                
+           }
+           log.debug("DiabeKareBean current_basal_profile read : "+current_bp);
+                   		            
+	        } catch (SQLException sqle) {
+	            System.out.println("SQL Error :" + sqle);
+	        }
+
+	        return current_bp;
+	}
+
 /**
  *	
  * @author Girish 

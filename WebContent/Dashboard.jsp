@@ -13,6 +13,36 @@ int battery = dkbean.getCurrentBatteryStatus();
 response.setIntHeader("Refresh", 25);
 %>
 
+<%
+int current_bp = dkbean.getCurrentBP();
+%>
+
+	
+<script>
+var bp = 11;
+
+function myFunction()
+	{
+
+	var r=confirm("Restore Basal Profile!");
+
+	if (r==true)
+		 {
+			bp = dkbean.getCurrentBP(); //x="You pressed OK!";
+		 }
+	else
+		 {
+		bp = 0;  //x="NULL";
+		 }
+	
+	}
+</script>
+
+
+
+
+
+
 <script>
 function startTime()
 {
@@ -137,10 +167,14 @@ return i;
         <div class="features">
         	<ul>
                           
-                </ul>
-	
+                </ul>	
 	
 <table>
+	<tr>
+		<td>
+		<button onclick="myFunction()">Restore BP</button>
+		</td>
+	</tr>
 	<tr>
 		<td>
 		<button type="button" id="stop">Stop</button>
@@ -254,21 +288,17 @@ return i;
 			
         </div>
         <div style="margin-top:10px; float:left;">
-        <%
-		ArrayList CurrentState = dkbean.getCurrentState();
-		for (int i = 0; i < CurrentState.size(); i++) {
-			String[] value = (String[]) CurrentState.get(i);
-	%>
+        
 	<tr>
 	<td align="center" class="txtstyle4">Selected Basal Profile ID</td>
 	</tr>
 	
+	
+	
 	<tr>			
-		<td align="center" class="txtstyle4"><%=value[3]%></td>
+		<td align="center" class="txtstyle4"><%=current_bp%></td>
 	</tr>
-	<%
-		}
-	%>
+	
         </div>
         
         <div class="application">

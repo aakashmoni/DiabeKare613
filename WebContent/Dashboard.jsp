@@ -336,6 +336,20 @@ return i;
 		</form>
 		</td>		
 		</tr>
+		<tr>
+			<td>
+			<form action="Dashboard.jsp"><input type="button" id="idname" value="Recharge battery to 50"
+			 />
+		</form>
+		<form   >
+		<%
+                
+           dkbean.setCurrentBatteryStatus(50);
+         %>
+		
+		</form>
+			</td>
+		</tr>
 
 	
 	

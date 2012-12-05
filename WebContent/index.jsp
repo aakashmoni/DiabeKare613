@@ -131,18 +131,40 @@ return i;
         <div id="sidebar">
         <h2>sidebar</h2>
         <div class="features">
-        	<ul>
-            	<li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-               
-            </ul>
+        	
+           <table> 
+            <tr>
+		
+		<td>
+		<form><input type="button" id="idname" value="Clock Pass"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/ClockPass.jsp';" />
+		</form>
+		</td>
+	
+	</tr>
+	<tr>
+		
+		<td>
+		<form><input type="button" id="idname" value="ECU Pass"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/ECUPass.jsp';" />
+		</form>
+		</td>
+		
+	</tr>
+	<tr>
+		
+		<td>
+		<form><input type="button" id="idname" value="H/W Pass"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/HardwarePass.jsp';" />
+		</form>
+		</td>
+		
+	</tr>
+	</table>
+            
         </div>
         <div style="margin-top:10px; float:left;">
         sidebar

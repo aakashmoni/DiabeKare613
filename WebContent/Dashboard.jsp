@@ -338,16 +338,11 @@ return i;
 		</tr>
 		<tr>
 			<td>
-			<form action="Dashboard.jsp"><input type="button" id="idname" value="Recharge battery to 50"
-			 />
+			<form><input type="button" id="idname" value="Recharge50"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/RechargeBattery.jsp';" />
 		</form>
-		<form   >
-		<%
-                
-           dkbean.setCurrentBatteryStatus(50);
-         %>
 		
-		</form>
 			</td>
 		</tr>
 

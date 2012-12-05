@@ -8,7 +8,7 @@ public class ApplicationServletContextListener implements ServletContextListener
  public void contextInitialized(ServletContextEvent event) 
  {
      ServletContext ctx = event.getServletContext();
-    Main main = new Main();
+     BatteryManager batterymanager = new BatteryManager();
   String prefix =  ctx.getRealPath("/");    
   String file = "src"+System.getProperty("file.separator")+"log4j.properties";
            

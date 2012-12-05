@@ -7,7 +7,7 @@ import java.util.TimerTask;
 import org.apache.log4j.Logger;
 
 
-public class Main {
+public class BatteryManager {
 	Toolkit toolkit;
 	Timer timer;
 	Logger log; 
@@ -18,7 +18,7 @@ public class Main {
  
    // System.out.print("I'm alive.new current.."+current_battery);
     
-	public Main() {
+	public BatteryManager() {
 		// checking if the battery life is more than  100, then set it to 100. 
 	    if(current_battery > 100) {
 	    	current_battery = 100;
@@ -47,11 +47,12 @@ public class Main {
 		        	toolkit.beep();
 		        }
 		        System.out.println("I'm alive.new current battery.."+dkBean.getCurrentBatteryStatus());
-		        if(new_current_battery <= -100000){
+		        if(new_current_battery <= 0){
 					System.out.println("current battery is 0");			    	
 					//timer.cancel();
-					System.exit(0);		//system exit if the battery is dead!
 					System.out.println("I'm dead!! Please recharge me");
+					System.exit(0);		//system exit if the battery is dead!
+					
 			    }
 		        
 		            

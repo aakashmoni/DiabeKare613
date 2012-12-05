@@ -135,9 +135,137 @@ if(document.f2.r23.value=="")
 	alert("enter valid rate23");
 	return false;
 }
+
 if(document.f2.r24.value=="")
 {
 	alert("enter valid rate24");
+	return false;
+}
+
+
+if(document.f2.r1.value > 10)
+{
+	alert("value entered for Hour:00 is above the maximum allowed value");
+	return false;
+}
+
+if(document.f2.r2.value > 10)
+{
+	alert("value entered for Hour:01 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r3.value > 10)
+{
+	alert("value entered for Hour:02 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r4.value > 10)
+{
+	alert("value entered for Hour:03 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r5.value > 10)
+{
+	alert("value entered for Hour:04 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r6.value > 10)
+{
+	alert("value entered for Hour:05 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r7.value > 10)
+{
+	alert("value entered for Hour:06 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r8.value > 10)
+{
+	alert("value entered for Hour:07 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r9.value > 10)
+{
+	alert("value entered for Hour:08 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r10.value > 10)
+{
+	alert("value entered for Hour:09 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r11.value > 10)
+{
+	alert("value entered for Hour:10 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r12.value > 10)
+{
+	alert("value entered for Hour:11 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r13.value > 10)
+{
+	alert("value entered for Hour:12 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r14.value > 10)
+{
+	alert("value entered for Hour:13 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r15.value > 10)
+{
+	alert("value entered for Hour:14 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r16.value > 10)
+{
+	alert("value entered for Hour:15 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r17.value > 10)
+{
+	alert("value entered for Hour:16 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r18.value > 10)
+{
+	alert("value entered for Hour:17 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r19.value > 10)
+{
+	alert("value entered for Hour:18 is above the maximum allowed value");
+	return false;
+}
+if(document.f2.r20.value > 10)
+{
+	alert("value entered for Hour:19 is above the maximum allowed value");
+	return false;
+}
+
+if(document.f2.r21.value > 10)
+{
+	alert("value entered for Hour:20 is above the maximum allowed value");
+	return false;
+}
+
+if(document.f2.r22.value > 10)
+{
+	alert("value entered for Hour:21 is above the maximum allowed value");
+	return false;
+}
+
+if(document.f2.r23.value > 10)
+{
+	alert("value entered for Hour:22 is above the maximum allowed value");
+	return false;
+}
+
+if(document.f2.r24.value > 10)
+{
+	alert("value entered for Hour:23 is above the maximum allowed value");
 	return false;
 }
 

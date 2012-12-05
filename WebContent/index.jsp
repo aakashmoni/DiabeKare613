@@ -138,7 +138,7 @@ return i;
 		<td>
 		<form><input type="button" id="idname" value="Clock Pass"
 			onclick="window.location = 
-'http://localhost:8080/DiabeKare613/ClockPass.jsp';" />
+'http://localhost:8080/DiabeKare613/ClockPass_index.jsp';" />
 		</form>
 		</td>
 	
@@ -148,7 +148,7 @@ return i;
 		<td>
 		<form><input type="button" id="idname" value="ECU Pass"
 			onclick="window.location = 
-'http://localhost:8080/DiabeKare613/ECUPass.jsp';" />
+'http://localhost:8080/DiabeKare613/ECUPass_index.jsp';" />
 		</form>
 		</td>
 		
@@ -158,7 +158,7 @@ return i;
 		<td>
 		<form><input type="button" id="idname" value="H/W Pass"
 			onclick="window.location = 
-'http://localhost:8080/DiabeKare613/HardwarePass.jsp';" />
+'http://localhost:8080/DiabeKare613/HardwarePass_index.jsp';" />
 		</form>
 		</td>
 		

@@ -14,7 +14,7 @@
         {
         	session.setAttribute("username",username);
            	log.debug("login.jsp----"+username+ " successfully Logged in");
-           	response.sendRedirect("Dashboard.jsp");
+            response.sendRedirect("SelfTest.jsp");
         }        
         else
           {

@@ -80,7 +80,9 @@ return i;
 			    <ul>
                     	<li><a href="Dashboard.jsp">HOME</a></li>
                         <li><a href="about.html">ABOUT PRODUCT</a></li>
-                        </ul>
+                        <li><a href="features.html">FEATURES</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
                 </div>
             </div>
     

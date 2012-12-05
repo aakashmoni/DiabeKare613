@@ -1202,7 +1202,7 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 		   
 		
 		   try {
-		            PreparedStatement pr = con.prepareStatement("update  current_state set current_battery = '"+insulin_level+"'");     
+		            PreparedStatement pr = con.prepareStatement("update  current_state set current_insulin = '"+insulin_level+"'");     
 		           
 		            pr.executeUpdate();
 		            log.debug("DiabeKareBean setCurrentBatteryStatus: "+insulin_level);

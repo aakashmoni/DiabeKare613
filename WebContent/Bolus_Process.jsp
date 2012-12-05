@@ -12,6 +12,7 @@ if (insulin <= max_insulin){
 	response.sendRedirect("Success_bolus.jsp");
 }
 if (insulin > max_insulin){
+	
 	response.sendRedirect("Failure_bolus.jsp");
 }
 

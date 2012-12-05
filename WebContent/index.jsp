@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page language="java" import="java.sql.*,java.util.*" %>
 <%@ page import="org.apache.log4j.Logger" %>
+
 <jsp:useBean id="dkbean" class="com.umd.app.diabekare.DiabeKareBean"/>
 <jsp:setProperty name="dkbean" property="*"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -11,6 +12,8 @@
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <%
+
+
 int battery = dkbean.getCurrentBatteryStatus();
 response.setIntHeader("Refresh", 30);
 

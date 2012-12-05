@@ -131,13 +131,7 @@ return i;
 	<div id="header">
     	<div id="logo"><a href="#"><img src="images/logo.png" width="330" height="120"  border="0"/></a></div>
         <div id="navigation">
-        	<div id="top">
-            		<FORM name=search onsubmit="return findInPage(this.string.value);">
-<P align=center><FONT size=3>
-<INPUT 
-style="BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #666666 1px solid; BORDER-BOTTOM: #666666 1px solid" 
-onchange="n = 0;" size=16 name=string></FONT><BR><INPUT style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #ffffff 1px solid; BORDER-BOTTOM: #ffffff 1px solid; FONT-FAMILY: Tahoma; BACKGROUND-COLOR: #aaaaaa" type=submit value=Search in page ><center><font size=2pt;><font family=Times New Roman;><b>
-            		
+        	<div id="top">         		
             <div id="top_right">
             
             <div id="txt"></div>
@@ -214,24 +208,24 @@ onchange="n = 0;" size=16 name=string></FONT><BR><INPUT style="BORDER-RIGHT: #ff
         	<ul>
                           
                 </ul>	
-	
 <table>
-	<tr>
-		<td>
-		<button onclick="myFunction()">Restore BP</button>
+<!--<tr>
+<td>
+		<button onclick="myFunction()">RestoreBasalProfile</button>
 		</td>
+</tr>
+	--><tr>	
+		<td>
+		<input type="image" src="images/play.png" width = "50" height = "50" name="button" id="play" />
+		</td>
+		<td>
+		<input type="image" src="images/stop.png" width = "50" height = "50" name="button" id="stop" />
+		</td>
+		<td>
+		<input type="image" src="images/pause.png" width = "50" height = "50" name="button" id="pause" />
+		</td>	
 	</tr>
-	<tr>
-		<td>
-		<button type="button" id="stop">Stop</button>
-		</td>
-		<td>
-		<button type="button" id="pause">Pause</button>
-		</td>
-		<td>
-		<button type="button" id="play">Play</button>
-		</td>
-	</tr>
+		
 <tr>
 <td>
 		<form><input type="button" id="idname" value="Power Off"

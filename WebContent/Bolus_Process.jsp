@@ -6,12 +6,15 @@ String radio_value = request.getParameter("fooditemID");
 String carbs_str = dkbean.submitBolus(radio_value);
 //out.println(carbs);
  int carbs = Integer.parseInt( carbs_str );
-int insulin = carbs/10;
+int bolus_insulin = carbs/10;
 int max_insulin = 100;
-if (insulin <= max_insulin){
+if (bolus_insulin <= max_insulin){
+	int current_insulin = dkbean.getCurrentInsulinLevel();
+	int new_current_insulin = current_insulin - bolus_insulin; 
+	dkbean.setCurrentInsulinLevel(new_current_insulin);
 	response.sendRedirect("Success_bolus.jsp");
 }
-if (insulin > max_insulin){
+if (bolus_insulin > max_insulin){
 	
 	response.sendRedirect("Failure_bolus.jsp");
 }

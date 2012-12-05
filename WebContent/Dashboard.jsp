@@ -232,6 +232,21 @@ onchange="n = 0;" size=16 name=string></FONT><BR><INPUT style="BORDER-RIGHT: #ff
 		<button type="button" id="play">Play</button>
 		</td>
 	</tr>
+<tr>
+<td>
+		<form><input type="button" id="idname" value="Power Off"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/PowerOff.jsp';" />
+		</form>
+		</td>
+		<td>
+		<form><input type="button" id="idname" value="Power On"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/PowerOn.jsp';" />
+		</form>
+		</td>
+		
+</tr>
 
 	<tr>
 		<td>

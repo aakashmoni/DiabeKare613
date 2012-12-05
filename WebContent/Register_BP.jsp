@@ -92,52 +92,52 @@ if(document.f2.r14.value=="")
 }
 if(document.f2.r15.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate15");
 	return false;
 }
 if(document.f2.r16.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate16");
 	return false;
 }
 if(document.f2.r17.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate17");
 	return false;
 }
 if(document.f2.r18.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate18");
 	return false;
 }
 if(document.f2.r19.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate19");
 	return false;
 }
 if(document.f2.r20.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate20");
 	return false;
 }
 if(document.f2.r21.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate21");
 	return false;
 }
 if(document.f2.r22.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate22");
 	return false;
 }
 if(document.f2.r23.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate23");
 	return false;
 }
 if(document.f2.r24.value=="")
 {
-	alert("enter valid rate");
+	alert("enter valid rate24");
 	return false;
 }
 

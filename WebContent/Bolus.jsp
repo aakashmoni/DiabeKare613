@@ -42,7 +42,7 @@ else
 <div class="leftbox">
 <h1>Bolus</h1>
 
-<form action="Bolus_Process_Textbox.jsp" name="f2" method="get" onSubmit="return ff()">
+<form action="Bolus_Process_Textbox.jsp" name="f1" method="get" onSubmit="return ff()">
 <table border="0">
 <tr>
 		<td>Carbohydrates:</td>
@@ -61,7 +61,7 @@ else
 	
 	
 
-<form action="Bolus_Process.jsp" name="f2" method="get" onSubmit="return ff()">
+<form action="Bolus_Process.jsp" name="f2" method="get" >
 
 <table border="0">
 
@@ -82,7 +82,7 @@ else
 
 	<tr>
 		<td align="center" class="txtstyle4">Item Id</td>
-		<td align="center" class="txtstyle4"> Food Item </td>
+		<td align="center" class="txtstyle4">Food Item</td>
 		<td align="center" class="txtstyle4"> Carbohydrates </td>
 	</tr>
 	

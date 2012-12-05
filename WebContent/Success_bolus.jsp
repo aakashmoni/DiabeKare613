@@ -46,6 +46,9 @@
 <div id="success_text"> Bolus has been given Successfully </div>
 </div>
 </div>
+<% response.setHeader("Refresh", "4; Bolus.jsp"); %>
+
+
 
 </body>
 

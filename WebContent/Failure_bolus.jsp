@@ -45,7 +45,7 @@
 <div id="success_text">Bolus amount specified exceeds the limit</div>
 </div>
 </div>
-
+<% response.setHeader("Refresh", "4; Bolus.jsp"); %>
 </body>
 
 </html>

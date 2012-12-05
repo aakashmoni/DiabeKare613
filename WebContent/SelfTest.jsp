@@ -9,13 +9,13 @@ if ((clock_state == 0) || (ecu_state == 0) || (hardware_state == 0))
 	alert("Self Test Failed")
 	</script><%
 
-response.sendRedirect("index.jsp");
+	response.setHeader("Refresh", "4; index.jsp");
 }
 if ((clock_state == 1) && (ecu_state ==1) && (hardware_state == 1))
 {
 	%><script language="javascript" type="text/javascript">
 	alert("Self Test Passed")
 	</script><%
-response.sendRedirect("Dashboard.jsp");
+	response.setHeader("Refresh", "4; Bolus.jsp"); 
 }
 %>

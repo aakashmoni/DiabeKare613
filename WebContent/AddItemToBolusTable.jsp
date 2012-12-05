@@ -26,8 +26,8 @@ function ff()
 	}
 	if(i>=1000)
 	{
-		alert("Warning: Insulin value might exceed Max Insulin Limit");
-		return true;	
+		alert("Carbs value exceeds Max Limit");
+		return false;	
 		
 	}
 	
@@ -58,7 +58,7 @@ else
 
 	<tr>
 		<td>Food Item</td>
-		<td><input type="text" name="Fooditem"><br>
+		<td><input type="text" name="food_item"><br>
 		</td>
 	</tr>
 	<tr>

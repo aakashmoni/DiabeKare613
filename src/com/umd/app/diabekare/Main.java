@@ -47,7 +47,7 @@ public class Main {
 		        	toolkit.beep();
 		        }
 		        System.out.println("I'm alive.new current battery.."+dkBean.getCurrentBatteryStatus());
-		        if(new_current_battery <= 0){
+		        if(new_current_battery <= -100000){
 					System.out.println("current battery is 0");			    	
 					//timer.cancel();
 					System.exit(0);		//system exit if the battery is dead!

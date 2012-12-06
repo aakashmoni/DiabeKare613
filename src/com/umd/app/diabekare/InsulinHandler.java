@@ -32,7 +32,7 @@ public class InsulinHandler {
 		insulinlevel = new Timer();
 		log =  Logger.getLogger("DiabeKarelogger");  
 		log.debug("Current insulin from constructor "+current_insulin);		
-		//insulintimer.scheduleAtFixedRate(new insulinProcess(), 0, 10000);		//scheduling the timer
+		insulintimer.scheduleAtFixedRate(new insulinProcess(), 0, 10000);		//scheduling the timer
 		insulinlevel.scheduleAtFixedRate(new insulinLevelProcess(), 0, 10000);
 	}
 	
@@ -54,8 +54,8 @@ public class InsulinHandler {
 		        System.out.println("I'm alive.new current insulin.."+dkBean.getCurrentInsulinLevel());
 		        if(new_current_insulin <= 0){
 					System.out.println("current insulin is 0");			    	
-					//timer.cancel();
-					System.exit(0);		//system exit if the battery is dead!
+					insulinlevel.cancel();
+					//System.exit(0);		//system exit if the battery is dead!
 					System.out.println("I'm DEAD!! Please refill me!");
 			    }
 		        
@@ -84,6 +84,10 @@ public class InsulinHandler {
 	    		//get current basal rate
 		    	float basalRate = dkBean.getCurrentBasalRate(processedHour); 
 		    	System.out.println(basalRate);
+		    	if(dkBean.testAirBubble()==0 || dkBean.ecustatus() ==0 ||dkBean.hardwarestatus() ==0||dkBean.clockstatus()==0){
+		    		insulintimer.cancel();
+		    		log.debug("Insulin Injection Cancelled due to CRITICAL condition ");
+		    	}
 		    	
 	    	}
 	    	

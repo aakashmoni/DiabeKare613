@@ -794,7 +794,7 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	public boolean makeClockFail ()
 	{
 		Connection con = dbConnection();
-		   Boolean flag = false;
+		   Boolean flag = true;
 		
 		   try {
 		            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET clock_status= 0");
@@ -827,7 +827,7 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	public boolean makeClockPass ()
 	{
 		Connection con = dbConnection();
-		   Boolean flag = false;
+		   Boolean flag = true;
 		
 		   try {
 		            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET clock_status= 1");
@@ -896,7 +896,7 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	public boolean makeECUFail ()
 	{
 		Connection con = dbConnection();
-		   Boolean flag = false;
+		   Boolean flag = true;
 		
 		   try {
 		            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET ecu_status= 0");
@@ -935,6 +935,7 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 		            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET ecu_status= 1");
 		            log.debug("DiabeKareBean.update current_state ==========UPDATE current_state SET ecu_status= 1 ECU Pass");
 		            rs1 = pr.executeUpdate();
+		            flag = true;
 		            
 
 		        } catch (SQLException sqle) {

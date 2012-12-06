@@ -244,10 +244,7 @@ return i;
 		</form>
 		</td>
 		<td>
-		<form><input type="button" id="idname" value="ECU Test"
-			onclick="window.location = 
-'http://localhost:8080/DiabeKare613/ECUTest.jsp';" />
-		</form>
+		
 		</td>
 	</tr>
 	<tr>
@@ -264,10 +261,7 @@ return i;
 		</form>
 		</td>
 		<td>
-		<form><input type="button" id="idname" value="H/W Test"
-			onclick="window.location = 
-'http://localhost:8080/DiabeKare613/HardwareTest.jsp';" />
-		</form>
+		
 		</td>
 	</tr>
 	<tr>

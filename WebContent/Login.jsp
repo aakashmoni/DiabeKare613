@@ -19,7 +19,7 @@
         else
           {
         	log.debug("login.jsp----"+username+ " failed Logged in");
-            response.sendRedirect("failure.jsp");
+            response.sendRedirect("Failure.jsp");
           }
 
 %>

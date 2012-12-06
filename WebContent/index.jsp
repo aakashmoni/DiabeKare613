@@ -128,9 +128,9 @@ return i;
             	<div id="topmenu">
 			    <ul>
                     	<li><a href="index.jsp">HOME</a></li>
-                        <li><a href="about.html">ABOUT PRODUCT</a></li>
-                        <li><a href="features.html">FEATURES</a></li>
-                        <li><a href="contact.html">CONTACT US</a></li>
+                        <li><a href="about_index.jsp">ABOUT PRODUCT</a></li>
+                        <li><a href="features_index.jsp">FEATURES</a></li>
+                        <li><a href="contact_index.jsp">CONTACT US</a></li>
                     </ul>
                 </div>
             </div>
@@ -140,12 +140,12 @@ return i;
         	<h1>Welcome to DiabeKare<br /><br />
             </h1>
 	  <div style="float:left; width:600px;">
-<p style="margin-top:0px; padding-top:0px;"> <img src="images/tslim_Front_High_View-e1347628517786.jpg" width="295" height="228" style="margin:0 10px 5px 0px; float:left;" />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera got
+<p style="margin-top:0px; padding-top:0px;"> <img src="images/tslim_Front_High_View-e1347628517786.jpg" width="295" height="228" style="margin:0 10px 5px 0px; float:left;" />Diabekare is a revolutionary product for diabetic patients. This is sleek, waterproof and very easy to wear. Unlike conventional Insulin pump, diabekare's User Interface is well tested for usability and human factors which makes it very easy to use. Repetitive self test which runs every 5 seconds and various safety alarms keeps the pump on constant check while being used. This intelligent pump has various new features which makes patient's life easy. It allows to add various basal profiles which can be set in accordance with your routine. User can maintain a customized food table which makes programming bolus very convenient. The product is well tested against all failures and safety hazards. The product comes with lifetime replacement warranty. 
 </div>
 	  <div class="clearfix"></div>
     </div>
         <div id="sidebar">
-        <h2>sidebar</h2>
+        <h2>Simulating Options</h2>
         <div class="features">
         	
            <table> 
@@ -181,26 +181,7 @@ return i;
 	</tr>
 	</table>
             
-        </div>
-        <div style="margin-top:10px; float:left;">
-        sidebar
-        </div>
-        
-        <div class="application">
-            <ul>
-            	<li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Lorem ipsum dolor sit amet</li>
-               
-            </ul>
-        </div>
-    </div>
+     
    	<div class="clearfix"></div>
     </div>
 <div class="clearfix"></div>

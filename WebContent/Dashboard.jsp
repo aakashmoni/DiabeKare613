@@ -159,7 +159,7 @@ return i;
                     	<li><a href="Dashboard.jsp">HOME</a></li>
                         <li><a href="BasalProfile.jsp">BASAL PROFILE</a></li>
                         <li><a href="Bolus.jsp">BOLUS</a></li>
-                        <li><a href="Settings.jsp">SETTINGS</a></li>
+                        <li><a href="EditUserDetails.jsp">EDIT USER DETAILS</a></li>
                     </ul>
                 </div>
             </div>

@@ -26,19 +26,22 @@ public class InsulinHandler {
 	    	current_insulin = 100;
 	    }	   
 	    // Setting initial battery life
-	    insulin  = new Insulin(current_insulin);
+	    insulin  = new Insulin();
 		toolkit = Toolkit.getDefaultToolkit();
 		insulintimer = new Timer();
 		insulinlevel = new Timer();
 		log =  Logger.getLogger("DiabeKarelogger");  
 		log.debug("Current insulin from constructor "+current_insulin);		
-		insulintimer.scheduleAtFixedRate(new insulinProcess(), 0, 10000);		//scheduling the timer
-		//insulinlevel.scheduleAtFixedRate(new insulinLevelProcess(), 0, 10000);
+		//insulintimer.scheduleAtFixedRate(new insulinProcess(), 0, 10000);		//scheduling the timer
+		insulinlevel.scheduleAtFixedRate(new insulinLevelProcess(), 0, 10000);
 	}
 	
 	       
 	    class insulinLevelProcess extends TimerTask {
-	    	public void run() {	    		
+	    	public void run() {
+	    		current_insulin = dkBean.getCurrentInsulinLevel();
+	    		//setting the given life
+	    		insulin.givenInsulinLife(current_insulin);
 		    	insulin.use(1);
 		    	int new_current_insulin = insulin.insulinLife();
 		    	System.out.println("new_current_insulin "+new_current_insulin);	    	
@@ -86,11 +89,11 @@ public class InsulinHandler {
 	    	
 	    }
 	    
-	            public static void main(String args[]) {
+	           /* public static void main(String args[]) {
 	                new InsulinHandler();
 	                System.out.format("Task scheduled.%n");
 	            
-	        }
+	        }*/
 	    }
 
 		

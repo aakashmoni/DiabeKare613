@@ -17,10 +17,11 @@ public class Insulin
    * @param givenLife
    *    initial life of this Insulin reservoir
    */
-  public Insulin(int givenLife)
+  public void givenInsulinLife(int givenLife)
   {
     life = givenLife;
   }
+  
   
   /**
    * Simulates using the Insulin reservoir for the

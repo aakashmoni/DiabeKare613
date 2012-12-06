@@ -187,7 +187,8 @@ return i;
 </tr>
 	--><tr>	
 		<td>
-		<input type="image" src="images/play.png" width = "50" height = "50" name="button" id="play" />
+		<input type="image" src="images/play.png" width = "50" height = "50" name="button" id="play" onclick="window.location = 
+'http://localhost:8080/DiabeKare613/StartInsulin.jsp';" />
 		</td>
 		<td>
 		<input type="image" src="images/stop.png" width = "50" height = "50" name="button" id="stop" />
@@ -312,6 +313,13 @@ return i;
 			<form><input type="button" id="idname" value="Recharge50"
 			onclick="window.location = 
 'http://localhost:8080/DiabeKare613/RechargeBattery.jsp';" />
+		</form>
+		
+			</td>
+			<td>
+			<form><input type="button" id="idname" value="Insulin50"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/RechargeInsulin.jsp';" />
 		</form>
 		
 			</td>

@@ -23,7 +23,7 @@ public class BatteryManager {
 	    if(current_battery > 100) {
 	    	current_battery = 100;
 	    }	   
-	    // Setting initial battery life
+	   
 	    battery  = new Battery();
 		toolkit = Toolkit.getDefaultToolkit();
 		timer = new Timer();
@@ -33,7 +33,7 @@ public class BatteryManager {
        //scheduling the timer        
         
 	}
-	static Boolean shutdown = false;
+	static boolean shutdown = false;
 	public static void cancelTimer(){
 		timer.cancel();
 		timer.purge();
@@ -71,10 +71,10 @@ public class BatteryManager {
 		        	shutdown = false;
 		        	
 		        }
-		        
+		        //exit system if battery is dead
 		        if(new_current_battery <= 0){
 					System.out.println("current battery is 0");			    	
-					timer.cancel();
+					//timer.cancel();
 					System.out.println("I'm dead!! Please recharge me");
 					System.exit(0);		//system exit if the battery is dead!
 					 

@@ -1,12 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ include file="DiabeKareHeader.jsp"%>
 <html>
+<link href="style.css" rel="stylesheet" type="text/css" />
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Edit User Details</title>
 </head>
-<body>
-Software
 
+<body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+Software
+<p>
 Allow the patient to customize features such as alarms, visual display, and degree of complexity so that the device can be matched to the patient's capabilities, needs, and limitations.
 Provide variable volume settings and tones for alarms.
 Provide menus that are more intuitively obvious.
@@ -22,20 +28,23 @@ Provide graphs of downloaded glucose levels from BG monitors and CGMs.
 Allocate an area for the patient and the physician to enter comments in the electronic logs that are available for download.
 Make software more available and reasonably priced for the public. Proprietary issues increase the cost of everything.
 Improve the accuracy of the pump's communication with the meter and CGM.
+<p>
+<p>
 Hardware
-
+<p>
 Produce devices with stronger vibrations.
 Use color in displays and make displays larger and more legible.
 Limit use, through software, to 3 days.
 Test accuracy and safety when using the pump in the highest heat of a desert climate such as Arizona.
+<p><p>
 Alarms
+<p>
+These should sound when:<br>
 
-These should sound when:
-
-the device is disconnected.
-the device is not switched to “suspend.”
-a meal time has passed and no bolus was recorded.
-“Activate” is not used for an intended bolus.
-the device needs to be reset
+the device is disconnected.<br>
+the device is not switched to suspend.��<br>
+a meal time has passed and no bolus was recorded.<br>
+Activate is not used for an intended bolus.<br>
+the device needs to be reset<br>
 </body>
 </html>

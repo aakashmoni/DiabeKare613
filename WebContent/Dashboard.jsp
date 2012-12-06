@@ -20,7 +20,8 @@ int current_bp = dkbean.getCurrentBP();
 
 	
 <script>
-//var bp = 11;
+var bp = 11;
+
 function myFunction()
 	{
 
@@ -29,7 +30,6 @@ function myFunction()
 	if (r==true)
 		 {
 			bp = dkbean.getCurrentBP(); //x="You pressed OK!";
-			//alert("Pressed Ok");
 		 }
 	else
 		 {
@@ -91,7 +91,7 @@ return i;
     }
 </script>
 
-<body onload="startTime(), myFunction()">
+<body onload="startTime()">
 <div id="container"> 
 	<div id="header">
     	<div id="logo"><a href="#"><img src="images/logo.png" width="330" height="120"  border="0"/></a></div>
@@ -169,7 +169,7 @@ return i;
         	<h1>Welcome to DiabeKare Dashboard<br /><br />
             </h1>
 	  <div style="float:left; width:600px;">
-<p style="margin-top:0px; padding-top:0px;"></p> <img src="images/tslim_Front_High_View-e1347628517786.jpg" width="295" height="228" style="margin:0 10px 5px 0px; float:left;" />Diabekare is a revolutionary product for diabetic patients. This is sleek, waterproof and very easy to wear. Unlike conventional Insulin pump, diabekare's User Interface is well tested for usability and human factors which makes it very easy to use. Repetitive self test which runs every 5 seconds and various safety alarms keeps the pump on constant check while being used. This intelligent pump has various new features which makes patient's life easy. It allows to add various basal profiles which can be set in accordance with your routine. User can maintain a customized food table which makes programming bolus very convenient. The product is well tested against all failures and safety hazards. The product comes with lifetime replacement warranty.
+<p style="margin-top:0px; padding-top:0px;"></p> <img src="images/tslim_Front_High_View-e1347628517786.jpg" width="295" height="228" style="margin:0 10px 5px 0px; float:left;" />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera got
 </div>
 	  <div class="clearfix"></div>
     </div>
@@ -180,33 +180,40 @@ return i;
                           
                 </ul>	
 <table>
-
 <!--<tr>
 <td>
 		<button onclick="myFunction()">RestoreBasalProfile</button>
 		</td>
 </tr>
 	--><tr>	
-	
-		<td>		
-		<form action="index.jsp">
-		<input type="image" src="images/play.png" width = "50" height = "50" name="button" id="play" />
-		</form>	
-		</td>
-		
 		<td>
-		<form action="index.jsp">
-		<input type="image" src="images/stop.png" width = "50" height = "50" name="button" id="stop" />
-		</form>		
+		<input type="image" src="images/play.png" width = "50" height = "50" name="button" id="play" onclick="window.location = 
+'http://localhost:8080/DiabeKare613/StartInsulin.jsp';" />
 		</td>
-		
 		<td>
-		<form action="index.jsp">
-		<input type="image" src="images/pause.png" width = "50" height = "50" name="button" id="pause" />
-		</form>	
+		
+		</td>
+		<td>
+		<input type="image" src="images/pause.png" width = "50" height = "50" name="button" id="pause" onclick="window.location = 
+'http://localhost:8080/DiabeKare613/PauseInsulin.jsp';" />
 		</td>	
-
 	</tr>
+		
+<tr>
+<td>
+		<form><input type="button" id="idname" value="Power Off"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/PowerOff.jsp';" />
+		</form>
+		</td>
+		<td>
+		<form><input type="button" id="idname" value="Power On"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/PowerOn.jsp';" />
+		</form>
+		</td>
+		
+</tr>
 
 	<tr>
 		<td>
@@ -221,7 +228,7 @@ return i;
 'http://localhost:8080/DiabeKare613/ClockPass.jsp';" />
 		</form>
 		</td>
-	
+		
 	</tr>
 	<tr>
 		<td>

@@ -95,9 +95,9 @@ return i;
             	<div id="topmenu">
 			    <ul>
                     	<li><a href="Dashboard.jsp">HOME</a></li>
-                        <li><a href="about.html">ABOUT PRODUCT</a></li>
-                        <li><a href="features.html">FEATURES</a></li>
-                        <li><a href="contact.html">CONTACT US</a></li>
+                        <li><a href="about.jsp">ABOUT PRODUCT</a></li>
+                        <li><a href="features.jsp">FEATURES</a></li>
+                        <li><a href="contact.jsp">CONTACT US</a></li>
                     </ul>
                 </div>
             </div>

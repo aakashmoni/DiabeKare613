@@ -477,17 +477,17 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	public boolean selectBasalProfile(String basalid)
 	{
 	   Connection con = dbConnection();
-	   Boolean flag = false;
+	   Boolean flag = true;
 	
 	   try {
 	            PreparedStatement pr = con.prepareStatement("UPDATE current_state SET current_basal_profile='"+basalid+"' WHERE state_id='1' ");
 	            System.out.println("==========UPDATE current_state SET current_basal_profile="+basalid+" WHERE state_id=1");
 	            log.debug("DiabeKareBean.update basal profile==========UPDATE current_state SET current_basal_profile="+basalid+" WHERE state_id=1");
 	            rs1 = pr.executeUpdate();
-	            /*if(rs.next())
-	            {
-	            	flag = true;
-	            }*/
+//	            if(rs.next())
+//	            {
+//	            	flag = true;
+//	            }
 
 	        } catch (SQLException sqle) {
 	            System.out.println("SQL Error :" + sqle);
@@ -560,6 +560,7 @@ public boolean insertBasalProfile(String name, String r1, String r2, String r3, 
 	            System.out.println("=========DELETE FROM basal_profile1 WHERE profile_id='"+basalid+"'");
 	            log.debug("DiabeKareBean.Delete basal profile==========DELETE FROM basal_profile1 WHERE profile_id='"+basalid+"'");
 	            rs1 = pr.executeUpdate();
+	            flag = true;
 	            /*if(rs.next())
 	            {
 	            	flag = true;

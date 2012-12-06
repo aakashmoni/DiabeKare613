@@ -20,10 +20,10 @@ a { text-decoration:none;}
 #content { width:960px; float:left; height:auto; margin:20px 0 0;}
 .loginbox{ width:387px; float:right; margin-top:10px;}
 #txtbox { background:url(images/txtbox.png) no-repeat; width:156px; height:29px; float:left; color:#bbb; border:none; line-height:25px; padding:0 5px; outline:none;}
-#innerpage_content { width:920px; float:left; height:auto; margin:0; padding:20px; background:#e7e9eb;}
-#innerpage_content #sidebar { width:266px;}
-#innerpage_content #sidebar  .features {width:266px;}
-#innerpage_content #sidebar  .application{width:266px;}
+#innerpage_content { width:940px; float:left; height:auto; margin:0; padding:20px; background:#e7e9eb;}
+#innerpage_content #sidebar { width:285px;}
+#innerpage_content #sidebar  .features {width:285px;}
+#innerpage_content #sidebar  .application{width:285px;}
 #submit { background:url(images/submit.png) no-repeat; width:33px; height:25px; border:none; font-size:0px; float:left; margin-left:2px; margin-top:2px; cursor:pointer;}
 .clearfix { clear:both;}
 .leftbox { width:619px; float:left; height:auto; font-weight:lighter; background:url(images/border.jpg) repeat-y right; padding: 0 15px 15px 0 ;}

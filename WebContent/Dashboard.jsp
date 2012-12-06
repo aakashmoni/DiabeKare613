@@ -10,6 +10,7 @@
 
 <%
 int battery = dkbean.getCurrentBatteryStatus();
+int insulinLevel = dkbean.getCurrentInsulinLevel();
 response.setIntHeader("Refresh", 25);
 %>
 
@@ -38,54 +39,14 @@ function myFunction()
 	}
 </script>
 
-<SCRIPT language=JavaScript>
-var NS4 = (document.layers);    
-var IE4 = (document.all);
-var win = window;    
-var n   = 0;
-function findInPage(str) {
-  var txt, i, found;
-  if (str == "")
-    return false;
-  if (NS4) {
-    if (!win.find(str))
-      while(win.find(str, false, true))
-        n++;
-    else
-      n++;
-    if (n == 0)
-      alert("Not found.");
-  }
-  if (IE4) {
-    txt = win.document.body.createTextRange();
-    for (i = 0; i <= n && (found = txt.findText(str)) != false; i++) {
-      txt.moveStart("character", 1);
-      txt.moveEnd("textedit");
-    }
-    if (found) {
-      txt.moveStart("character", -1);
-      txt.findText(str);
-      txt.select();
-      txt.scrollIntoView();
-      n++;
-    }
-    else {
-      if (n > 0) {
-        n = 0;
-        findInPage(str);
-      }
-      else
-        alert("Sorry, we couldn't find.Try again");
-   }
-  }
-  return false;
-}
-</SCRIPT>
-
-
 <script>
 function startTime()
 {
+<%
+	int clockStatus = dkbean.clockstatus();
+%>
+var clockStatus = "<%=clockStatus%>";
+	
 var today=new Date();
 var h=today.getHours();
 var m=today.getMinutes();
@@ -93,7 +54,11 @@ var s=today.getSeconds();
 // add a zero in front of numbers<10
 m=checkTime(m);
 s=checkTime(s);
+if (clockStatus == 1){
 document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+}else{
+	document.getElementById('txt').innerHTML="Clock Fail";
+}
 t=setTimeout(function(){startTime()},500);
 }
 
@@ -131,18 +96,18 @@ return i;
 	<div id="header">
     	<div id="logo"><a href="#"><img src="images/logo.png" width="330" height="120"  border="0"/></a></div>
         <div id="navigation">
-        	<div id="top">
-            		<FORM name=search onsubmit="return findInPage(this.string.value);">
-<P align=center><FONT size=3>
-<INPUT 
-style="BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #666666 1px solid; BORDER-BOTTOM: #666666 1px solid" 
-onchange="n = 0;" size=16 name=string></FONT><BR><INPUT style="BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #ffffff 1px solid; BORDER-BOTTOM: #ffffff 1px solid; FONT-FAMILY: Tahoma; BACKGROUND-COLOR: #aaaaaa" type=submit value=Search in page ><center><font size=2pt;><font family=Times New Roman;><b>
-            		
+        	<div id="top">         		
             <div id="top_right">
             
             <div id="txt"></div>
              <div style="float:left; width:165px;"><div class="meter-wrap">
-    <div class="meter-value" style="background-color: #0a0; width: 50%;">
+             <%
+          if(insulinLevel < 20){
+             %>
+             <div class="meter-value" style="background-color: #a90000; width: <%=insulinLevel%>%;">
+    	<%}else{ %>
+    <div class="meter-value" style="background-color: #0a0; width: <%=insulinLevel%>%;">
+     <%} %>
         <div class="meter-text">
             Insulin
         </div>
@@ -214,24 +179,24 @@ onchange="n = 0;" size=16 name=string></FONT><BR><INPUT style="BORDER-RIGHT: #ff
         	<ul>
                           
                 </ul>	
-	
 <table>
-	<tr>
-		<td>
-		<button onclick="myFunction()">Restore BP</button>
+<!--<tr>
+<td>
+		<button onclick="myFunction()">RestoreBasalProfile</button>
 		</td>
+</tr>
+	--><tr>	
+		<td>
+		<input type="image" src="images/play.png" width = "50" height = "50" name="button" id="play" />
+		</td>
+		<td>
+		<input type="image" src="images/stop.png" width = "50" height = "50" name="button" id="stop" />
+		</td>
+		<td>
+		<input type="image" src="images/pause.png" width = "50" height = "50" name="button" id="pause" />
+		</td>	
 	</tr>
-	<tr>
-		<td>
-		<button type="button" id="stop">Stop</button>
-		</td>
-		<td>
-		<button type="button" id="pause">Pause</button>
-		</td>
-		<td>
-		<button type="button" id="play">Play</button>
-		</td>
-	</tr>
+		
 <tr>
 <td>
 		<form><input type="button" id="idname" value="Power Off"
@@ -341,6 +306,15 @@ onchange="n = 0;" size=16 name=string></FONT><BR><INPUT style="BORDER-RIGHT: #ff
 'http://localhost:8080/DiabeKare613/TestAirBubble.jsp';" />
 		</form>
 		</td>		
+		</tr>
+		<tr>
+			<td>
+			<form><input type="button" id="idname" value="Recharge50"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/RechargeBattery.jsp';" />
+		</form>
+		
+			</td>
 		</tr>
 
 	

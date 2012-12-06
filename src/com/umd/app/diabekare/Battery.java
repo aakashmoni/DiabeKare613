@@ -17,7 +17,7 @@ public class Battery
    * @param givenLife
    *    initial life of this battery
    */
-  public Battery(int givenLife)
+  public void givenBatteryLife(int givenLife)
   {
     life = givenLife;
   }

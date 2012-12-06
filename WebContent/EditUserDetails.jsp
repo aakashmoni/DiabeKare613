@@ -81,7 +81,7 @@ else
 	</tr>
 
 	<%
-		ArrayList user_profile = dkbean.getUserDetails();
+	ArrayList user_profile = dkbean.getUserDetails();
 		for (int i = 0; i < user_profile.size(); i++) {
 		String[] value = (String[]) user_profile.get(i);		
 		

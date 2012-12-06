@@ -1,5 +1,7 @@
 <jsp:useBean id="dkbean" class="com.umd.app.diabekare.DiabeKareBean"/>
+<%@ page import="org.apache.log4j.Logger" %>
 <%
+Logger log = Logger.getLogger("DiabeKarelogger");
 String name=request.getParameter("name");
 out.println(name);
 String r1=request.getParameter("r1");
@@ -52,5 +54,15 @@ String r24=request.getParameter("r24");
 out.println(r24);
 //String total = 
 boolean flag = dkbean.insertBasalProfile(name,  r1,  r2,  r3,  r4,  r5,  r6,  r7,  r8,  r9,  r10,  r11,  r12,  r13,  r14,  r15,  r16,  r17,  r18,  r19,  r20,  r21,  r22,  r23,  r24);
-out.println(flag);
+if(flag == true)
+{
+	
+   	log.debug(" successfully created basal profile");
+   	response.sendRedirect("Success.jsp");
+}        
+else
+  {
+	log.debug("Failed to  create basal profile");
+    response.sendRedirect("Failure.jsp");
+  }
 %>

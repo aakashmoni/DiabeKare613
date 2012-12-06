@@ -52,6 +52,13 @@ public class InsulinHandler {
 		        	toolkit.beep();
 		        }
 		        System.out.println("I'm alive.new current insulin.."+dkBean.getCurrentInsulinLevel());
+		        if(dkBean.getBatteryPause() == 0){
+		        	insulinlevel.cancel();
+		        	insulinlevel.purge();
+		        	System.out.println("timer cancelled..please work!");
+		        	//shutdown = false;
+		        	
+		        }
 		        if(new_current_insulin <= 0){
 					System.out.println("current insulin is 0");			    	
 					insulinlevel.cancel();

@@ -12,6 +12,7 @@
 </head>
 <%
 int battery = dkbean.getCurrentBatteryStatus();
+int insulinLevel = dkbean.getCurrentInsulinLevel();
 response.setIntHeader("Refresh", 30);
 %>
 <script>
@@ -36,6 +37,37 @@ if (i<10)
   }
 return i;
 }
+</script><script>
+function startTime()
+{
+<%
+	int clockStatus = dkbean.clockstatus();
+%>
+var clockStatus = "<%=clockStatus%>";
+	
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+if (clockStatus == 1){
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+}else{
+	document.getElementById('txt').innerHTML="Clock Fail";
+}
+t=setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
 </script>
 <body onload="startTime()">
 
@@ -48,7 +80,13 @@ return i;
             <div id="top_right"> 
             <div id="txt"></div>
             <div style="float:left; width:165px;"><div class="meter-wrap">
-    <div class="meter-value" style="background-color: #0a0; width: 50%;">
+			<%
+          if(insulinLevel < 20){
+             %>
+             <div class="meter-value" style="background-color: #a90000; width: <%=insulinLevel%>%;">
+    	<%}else{ %>
+    <div class="meter-value" style="background-color: #0a0; width: <%=insulinLevel%>%;">
+     <%} %>
         <div class="meter-text">
             Insulin
         </div>

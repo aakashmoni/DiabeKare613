@@ -310,7 +310,7 @@ return i;
 		</tr>
 		<tr>
 			<td>
-			<form><input type="button" id="idname" value="Recharge50"
+			<form><input type="button" id="idname" value="Battery50"
 			onclick="window.location = 
 'http://localhost:8080/DiabeKare613/RechargeBattery.jsp';" />
 		</form>

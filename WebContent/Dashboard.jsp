@@ -20,23 +20,23 @@ int current_bp = dkbean.getCurrentBP();
 
 	
 <script>
-var bp = 11;
-
-//function myFunction()
-//	{
+//var bp = 11;
+function myFunction()
+	{
 
 	var r=confirm("Restore Basal Profile!");
 
 	if (r==true)
 		 {
 			bp = dkbean.getCurrentBP(); //x="You pressed OK!";
+			//alert("Pressed Ok");
 		 }
 	else
 		 {
-			bp = 0;  //x="NULL";
+		bp = 0;  //x="NULL";
 		 }
 	
-	//}
+	}
 </script>
 
 <script>
@@ -91,7 +91,7 @@ return i;
     }
 </script>
 
-<body onload="startTime()">
+<body onload="startTime(), myFunction()">
 <div id="container"> 
 	<div id="header">
     	<div id="logo"><a href="#"><img src="images/logo.png" width="330" height="120"  border="0"/></a></div>
@@ -236,7 +236,12 @@ return i;
 'http://localhost:8080/DiabeKare613/ECUPass.jsp';" />
 		</form>
 		</td>
-		
+		<td>
+		<form><input type="button" id="idname" value="ECU Test"
+			onclick="window.location = 
+'http://localhost:8080/DiabeKare613/ECUTest.jsp';" />
+		</form>
+		</td>
 	</tr>
 	<tr>
 		<td>

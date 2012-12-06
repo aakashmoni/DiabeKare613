@@ -15,7 +15,7 @@ String hw = "";
 String clocks = "";
 int battery = dkbean.getCurrentBatteryStatus();
 int insulinLevel = dkbean.getCurrentInsulinLevel();
-
+response.setIntHeader("Refresh", 25);
 int clock_status = dkbean.clockstatus();
 if (clock_status == 0){
 	clocks = "failure";

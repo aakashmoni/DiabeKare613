@@ -12,6 +12,14 @@
 
 
 <body>
+<script language="javascript">
+
+function ff()
+{	
+	return true;
+
+}
+</script>
 <div id="container">
 <div id="innerpage_content">
 <div class="leftbox">
@@ -21,7 +29,7 @@
 <button name="subject" type="submit" value="fav_HTML">Create New</button>
 </form>
 
-<form action="BasalProfile_Process.jsp" method="get">
+<form action="BasalProfile_Process.jsp" name="f2" method="get" onSubmit="return ff()">
 
 <table border="0">
 
@@ -57,8 +65,10 @@
 	<tr>
 		<!--<td align="center" class="txtstyle4"><%=value[0]%></td>-->
 
+
 		<td align="center" class="txtstyle4"><input type="radio" name="basalPID" value=<%=value[0]%>></td>
 		<td align="center" class="txtstyle4"><%=value[1]%></td>
+		
 
 		<!--<td align="center" class="txtstyle4">
 			<button type="button">View / Edit</button>
@@ -101,9 +111,9 @@
 			name="submit" value="Delete" onclick="form.action='DeleteBasalProfile.jsp'"></td>		
 	</tr>
 </table>
-
-
 </form>
+
+
 </div>
 <div class="clearfix"></div>
 </div>

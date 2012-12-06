@@ -20,8 +20,7 @@ int current_bp = dkbean.getCurrentBP();
 
 	
 <script>
-var bp = 11;
-
+//var bp = 11;
 function myFunction()
 	{
 
@@ -30,6 +29,7 @@ function myFunction()
 	if (r==true)
 		 {
 			bp = dkbean.getCurrentBP(); //x="You pressed OK!";
+			//alert("Pressed Ok");
 		 }
 	else
 		 {
@@ -91,7 +91,7 @@ return i;
     }
 </script>
 
-<body onload="startTime()">
+<body onload="startTime(), myFunction()">
 <div id="container"> 
 	<div id="header">
     	<div id="logo"><a href="#"><img src="images/logo.png" width="330" height="120"  border="0"/></a></div>
@@ -221,12 +221,7 @@ return i;
 'http://localhost:8080/DiabeKare613/ClockPass.jsp';" />
 		</form>
 		</td>
-		<td>
-		<form><input type="button" id="idname" value="Clock Test"
-			onclick="window.location = 
-'http://localhost:8080/DiabeKare613/ClockTest.jsp';" />
-		</form>
-		</td>
+	
 	</tr>
 	<tr>
 		<td>

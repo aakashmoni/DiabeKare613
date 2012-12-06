@@ -5,4 +5,10 @@ String radio_value = request.getParameter("basalPID");
 
 boolean flag = dkbean.selectBasalProfile(radio_value);
 //out.println(flag);
+if (flag){
+	response.sendRedirect("Success.jsp");
+}
+else{
+	response.sendRedirect("Failure.jsp");
+}
 %>

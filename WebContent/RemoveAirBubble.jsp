@@ -1,5 +1,6 @@
 <jsp:useBean id="dkbean" class="com.umd.app.diabekare.DiabeKareBean"/>
 <%
 boolean flag = dkbean.removeAirBubble();
-out.println(flag);
+
+response.sendRedirect("Dashboard.jsp");
 %>

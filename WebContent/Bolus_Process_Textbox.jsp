@@ -1,7 +1,7 @@
 <jsp:useBean id="dkbean" class="com.umd.app.diabekare.DiabeKareBean"/>
-
+<%@ page import="org.apache.log4j.Logger" %>
 <%
-
+Logger log = Logger.getLogger("DiabeKarelogger");
 String carbs_str = request.getParameter("Carbohydrates");
 int carbs = Integer.parseInt( carbs_str );
 
@@ -18,6 +18,7 @@ if (bolus_insulin <= max_insulin){
 	{
 	dkbean.setCurrentInsulinLevel(new_current_insulin);
 	out.println(new_current_insulin);
+	log.debug("Bolus of "+bolus_insulin+" given");
 	response.sendRedirect("Success_bolus.jsp");
 	}
 	

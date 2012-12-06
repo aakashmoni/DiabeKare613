@@ -22,8 +22,8 @@ int current_bp = dkbean.getCurrentBP();
 <script>
 var bp = 11;
 
-function myFunction()
-	{
+//function myFunction()
+//	{
 
 	var r=confirm("Restore Basal Profile!");
 
@@ -33,10 +33,10 @@ function myFunction()
 		 }
 	else
 		 {
-		bp = 0;  //x="NULL";
+			bp = 0;  //x="NULL";
 		 }
 	
-	}
+	//}
 </script>
 
 <script>
@@ -221,12 +221,7 @@ return i;
 'http://localhost:8080/DiabeKare613/ClockPass.jsp';" />
 		</form>
 		</td>
-		<td>
-		<form><input type="button" id="idname" value="Clock Test"
-			onclick="window.location = 
-'http://localhost:8080/DiabeKare613/ClockTest.jsp';" />
-		</form>
-		</td>
+	
 	</tr>
 	<tr>
 		<td>
@@ -241,12 +236,7 @@ return i;
 'http://localhost:8080/DiabeKare613/ECUPass.jsp';" />
 		</form>
 		</td>
-		<td>
-		<form><input type="button" id="idname" value="ECU Test"
-			onclick="window.location = 
-'http://localhost:8080/DiabeKare613/ECUTest.jsp';" />
-		</form>
-		</td>
+		
 	</tr>
 	<tr>
 		<td>

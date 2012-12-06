@@ -63,12 +63,12 @@ public class BatteryManager {
 		        	toolkit.beep();
 		        }
 		        System.out.println("I'm alive.new current battery.."+dkBean.getCurrentBatteryStatus());
-		        
-		        if(shutdown){
+		        System.out.println("getBatteryPause.."+dkBean.getBatteryPause());
+		        if(dkBean.getBatteryPause() == 0){
 		        	timer.cancel();
 		        	timer.purge();
 		        	System.out.println("timer cancelled..please work!");
-		        	shutdown = false;
+		        	//shutdown = false;
 		        	
 		        }
 		        //exit system if battery is dead

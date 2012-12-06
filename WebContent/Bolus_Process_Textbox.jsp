@@ -11,9 +11,15 @@ if (bolus_insulin <= max_insulin){
 	int current_insulin = dkbean.getCurrentInsulinLevel();
 	out.println(current_insulin);
 	int new_current_insulin = current_insulin - bolus_insulin; 
+	if (new_current_insulin <=  0){
+		response.sendRedirect("Failure_bolus_lowinsulin.jsp");	
+	}
+	else
+	{
 	dkbean.setCurrentInsulinLevel(new_current_insulin);
 	out.println(new_current_insulin);
 	response.sendRedirect("Success_bolus.jsp");
+	}
 	
 }
 if (bolus_insulin > max_insulin){
